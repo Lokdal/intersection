@@ -32,9 +32,9 @@
     "initiative": "1d20",
     "gridDistance": 1,
     "gridUnits": "m",
-    "primaryTokenAttribute": "resources.life_points",
-    "secondaryTokenAttribute": "resources.stamina_points",
+    "primaryTokenAttribute": null,
+    "secondaryTokenAttribute": null,
     "url": "",
-    "manifest": "",
-    "download": ""
+    "manifest": "https://github.com/Lokdal/intersection/blob/master/system.json",
+    "download": "https://github.com/Lokdal/intersection/archive/master.zip"
 }
