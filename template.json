@@ -32,10 +32,11 @@
 
                 "spentOnItems_exp": 0
             },
+
             "resources": {
                 "life_points": {
                     "min": 0,
-                    "max": 1, // Base + effects
+                    "max": 1,
                     "base": 1,
                     "value": 1
                 },
@@ -51,13 +52,37 @@
                     "base": 1,
                     "value": 1
                 },
-                "spendable_points": {
-                    "combat_skill_points": 0,
-                    "melee_skill_points": 0,
-                    "ranged_skill_points": 0,
-                    "magic_skill_points": 0,
-                    "resource_points": 0
-                }
+
+                "combat_skill_points": {
+                    "min": 0,
+                    "max": 1,
+                    "base": 0,
+                    "value": 0
+                },
+                "melee_skill_points": {
+                    "min": 0,
+                    "max": 1,
+                    "base": 0,
+                    "value": 0
+                },
+                "ranged_skill_points": {
+                    "min": 0,
+                    "max": 1,
+                    "base": 0,
+                    "value": 0
+                },
+                "magic_skill_points": {
+                    "min": 0,
+                    "max": 1,
+                    "base": 0,
+                    "value": 0
+                },
+                "life_stam_mana_points": {
+                    "min": 0,
+                    "max": 1,
+                    "base": 0,
+                    "value": 0
+                }   
             },
             "stats": {
                 "melee_off": {
@@ -298,18 +323,20 @@
             "skill",
             "consumable",
             "resource",
-            "other"],
+            "other"
+        ],
         "templates": {
 
             "common": {
-                "fighting_style": "None", // Melee, Ranged, Magic, Combat, None
+                "fightingStyle": "None",
                 "tier": 0,
                 "level": 0,
                 "exp": 0,
                 "name": "",
-                "slot": "", // Hands, Armor, Helm, Cape, Gloves, Boots, Ring, Charm, Amulet, Spell, Skill, Belt, Backpack
-                "slots_needed": 1, // 2 for two handed weapons and maybe for other/quest
-                "price": 0, // To be determined
+                "slot": "",
+                "slots_needed": 1,
+                "price": 0,
+                "description": "",
                 "active_q": false
             },
 
@@ -443,14 +470,15 @@
             }
         },
 
-        "equipment":{
-            "templates": ["common", "stats", "skills"]
-            }
-        ,
+        "equipment": {
+            "templates": ["common", "stats", "skills"],
+            "name": "lol"
+        },
+        
         "spell": {
             "templates": ["common", "stats", "actives"],
-            "color": "", // White, Grey, Black
-            "type": "", // Commune, Control, Conjure
+            "color": "",
+            "type": "",
             "spellForce": 0
             
         },
@@ -462,19 +490,19 @@
 
         "consumable": {
             "templates": ["common", "stats", "skills", "actives"],
-            "type": "", // Potion, Enhancer, Oil, Bomb, Mutagen, Catalyst
+            "type": "",
             "uses_total": 0,
             "uses_left": 0
         },
 
         "resource": {
             "templates": ["common"],
-            "type": "" // Metal, Leather, Fabric, Wood, Gem, Plant, Solvent, Weird Rock
+            "type": ""
         },
 
         "other": {
             "templates": ["common"],
-            "type": "" // Quest, Other
+            "type": ""
         }
     }
 }
