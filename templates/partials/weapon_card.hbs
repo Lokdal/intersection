@@ -1,0 +1,7 @@
+<div class="weapon-card">
+    <div class="weapon-stats">
+        {{#if (compare data.fightingStyle "==" "melee")}}{{data.melee_off}}{{/if}}
+        {{#if (compare data.fightingStyle "==" "ranged")}}{{data.ranged_off}}{{/if}}
+        {{#if (compare data.fightingStyle "==" "magic")}}{{data.magic_off}}{{/if}}
+    </div>
+</div> 

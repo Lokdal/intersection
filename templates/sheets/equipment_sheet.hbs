@@ -1,0 +1,49 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </header>
+    <div class="sheet-content">
+        <table>
+            <tr>
+                <th>Equipment Type</th>
+                <th>Fighting Style</th>
+                <th>Experience</th>
+                <th>Melee Offense</th>
+                <th>Ranged Offense</th>
+                <th>Magic Offense</th>
+                <th>Melee Defense</th>
+                <th>Ranged Defense</th>
+                <th>Magic Defense</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="data.type">
+                    {{#select data.type}}
+                    {{#each config.itemSubtype as |name type|}}
+                    <option value="{{type}}">{{name}}</option>
+                    {{/each}}
+                    {{/select}}
+                    </select>
+                </td>
+                <td>
+                    <select name="data.fightingStyle">
+                    {{#select data.fightingStyle}}
+                    {{#each config.fightingStyle as |name type|}}
+                    <option value="{{type}}">{{name}}</option>
+                    {{/each}}
+                    {{/select}}
+                    </select>
+                </td>
+                <td><input name="data.exp" type="text" value="{{data.exp}}" data-dtype="Number"/></td>
+                <td><input name="data.melee_off" type="text" value="{{data.melee_off}}" data-dtype="Number"/></td>
+                <td><input name="data.ranged_off" type="text" value="{{data.ranged_off}}" data-dtype="Number"/></td>
+                <td><input name="data.magic_off" type="text" value="{{data.magic_off}}" data-dtype="Number"/></td>
+                <td><input name="data.melee_def" type="text" value="{{data.melee_def}}" data-dtype="Number"/></td>
+                <td><input name="data.ranged_def" type="text" value="{{data.ranged_def}}" data-dtype="Number"/></td>
+                <td><input name="data.magic_def" type="text" value="{{data.magic_def}}" data-dtype="Number"/></td>
+            </tr>
+        </table>
+        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+    </div>
+</form>

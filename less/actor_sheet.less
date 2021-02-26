@@ -1,0 +1,90 @@
+.intersection.sheet.actor{
+    box-sizing: border-box;
+    .form{
+        display: block;
+    }
+    
+    .sheet-content{
+        display: grid;
+        grid-template-columns: repeat(22, 40px);
+        grid-template-rows: 160px 140px 1fr;
+
+        .summary_table{
+            grid-column-start: 2;
+            grid-column-end: 7;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .points_table{
+            grid-column-start: 9;
+            grid-column-end: 14;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(4, 1em);
+        }
+        .tombstone{
+            grid-column-start: 18;
+            grid-column-end: 21;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            font-size: 20pt;
+        }
+        .stats_table{
+            grid-column-start: 2;
+            grid-column-end: 21;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            display: grid;
+            grid-template-columns: repeat(3, 70px) repeat(10, 59px);
+            grid-template-rows: repeat(5, auto);
+        }
+
+        .equipment_table{
+            grid-column-start: 2;
+            grid-column-end: 7;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            display: grid;
+            grid-template-columns: repeat(3, 64px);
+            grid-template-rows: repeat(3, 64px) 16px repeat(3, 64px);
+        }
+        
+        .skill_table{
+            grid-column-start: 8;
+            grid-column-end: 21;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+        }
+        
+        .col_table{
+            text-align: center;
+            font-size: 12.0pt;
+        
+            .cell_header{
+                font-weight: bold;
+                height: 2em;
+                word-wrap: normal;
+            }
+
+            .cell_data{
+                height: 1.3em;
+                margin-top: 0px;
+                margin-right: 0px;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+                padding-right: 0px;
+                border-width: 0px;
+                background-color: transparent;
+                box-sizing: border-box;
+                size: 5;
+            }
+        }
+    }
+}

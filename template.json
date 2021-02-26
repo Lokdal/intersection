@@ -1,19 +1,20 @@
 {
     "Actor": {
         "types": [
-            "hero",
-            "enemy",
-            "npc"],
+            "creature",
+            "boss",
+            "other"],
 
         "templates": {
 
             "common": {
                 "name": "",
                 "image": "",
-                "token": ""
+                "token": "",
+                "description": ""
             },
 
-            "experience": {                
+            "experience": {
                 "combat_tier": 0,
                 "combat_level": 0,
                 "combat_exp": 0,
@@ -86,141 +87,141 @@
             },
             "stats": {
                 "melee_off": {
-                    "melee_off_base": 1,
-                    "melee_off_equip": 0,
-                    "melee_off_total": 0
+                    "base": 1,
+                    "equip": 0,
+                    "total": 0
                 },
                 "melee_def": {
-                    "melee_def_base": 1,
-                    "melee_def_equip": 0,
-                    "melee_def_total": 0
+                    "base": 1,
+                    "equip": 0,
+                    "total": 0
                 },
                 "melee_crit": {
-                    "melee_crit_base": 0,
-                    "melee_crit_equip": 0,
-                    "melee_crit_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "melee_extraAtt": {
-                    "melee_extraAtt_base": 1,
-                    "melee_extraAtt_equip": 0,
-                    "melee_extraAtt_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "melee_cripple": {
-                    "melee_cripple_base": 0,
-                    "melee_cripple_equip": 0,
-                    "melee_cripple_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "melee_stun": {
-                    "melee_stun_base": 0,
-                    "melee_stun_equip": 0,
-                    "melee_stun_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "melee_pierce": {
-                    "melee_pierce_base": 0,
-                    "melee_pierce_equip": 0,
-                    "melee_pierce_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "melee_dodge": {
-                    "melee_dodge_base": 0,
-                    "melee_dodge_equip": 0,
-                    "melee_dodge_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "melee_soak": {
-                    "melee_soak_base": 0,
-                    "melee_soak_equip": 0,
-                    "melee_soak_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
 
                 "ranged_off": {
-                    "ranged_off_base": 1,
-                    "ranged_off_equip": 0,
-                    "ranged_off_total": 0
+                    "base": 1,
+                    "equip": 0,
+                    "total": 0
                 },
                 "ranged_def": {
-                    "ranged_def_base": 1,
-                    "ranged_def_equip": 0,
-                    "ranged_def_total": 0
+                    "base": 1,
+                    "equip": 0,
+                    "total": 0
                 },
                 "ranged_crit": {
-                    "ranged_crit_base": 0,
-                    "ranged_crit_equip": 0,
-                    "ranged_crit_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "ranged_extraAtt": {
-                    "ranged_extraAtt_base": 0,
-                    "ranged_extraAtt_equip": 0,
-                    "ranged_extraAtt_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "ranged_cripple": {
-                    "ranged_cripple_base": 0,
-                    "ranged_cripple_equip": 0,
-                    "ranged_cripple_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "ranged_stun": {
-                    "ranged_stun_base": 0,
-                    "ranged_stun_equip": 0,
-                    "ranged_stun_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "ranged_pierce": {
-                    "ranged_pierce_base": 0,
-                    "ranged_pierce_equip": 0,
-                    "ranged_pierce_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "ranged_dodge": {
-                    "ranged_dodge_base": 0,
-                    "ranged_dodge_equip": 0,
-                    "ranged_dodge_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "ranged_soak": {
-                    "ranged_soak_base": 0,
-                    "ranged_soak_equip": 0,
-                    "ranged_soak_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
 
                 "magic_off": {
-                    "magic_off_base": 1,
-                    "magic_off_equip": 0,
-                    "magic_off_total": 0
+                    "base": 1,
+                    "equip": 0,
+                    "total": 0
                 },
                 "magic_def": {
-                    "magic_def_base": 1,
-                    "magic_def_equip": 0,
-                    "magic_def_total": 0
+                    "base": 1,
+                    "equip": 0,
+                    "total": 0
                 },
                 "magic_crit": {
-                    "magic_crit_base": 0,
-                    "magic_crit_equip": 0,
-                    "magic_crit_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "magic_extraAtt": {
-                    "magic_extraAtt_base": 0,
-                    "magic_extraAtt_equip": 0,
-                    "magic_extraAtt_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "magic_cripple": {
-                    "magic_cripple_base": 0,
-                    "magic_cripple_equip": 0,
-                    "magic_cripple_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "magic_stun": {
-                    "magic_stun_base": 0,
-                    "magic_stun_equip": 0,
-                    "magic_stun_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "magic_pierce": {
-                    "magic_pierce_base": 0,
-                    "magic_pierce_equip": 0,
-                    "magic_pierce_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "magic_dodge": {
-                    "magic_dodge_base": 0,
-                    "magic_dodge_equip": 0,
-                    "magic_dodge_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
                 "magic_soak": {
-                    "magic_soak_base": 0,
-                    "magic_soak_equip": 0,
-                    "magic_soak_total": 0
+                    "base": 0,
+                    "equip": 0,
+                    "total": 0
                 },
 
                 "movement_speed": 1,
@@ -301,17 +302,34 @@
                 "combat_skill_offense_coupDeGrace": 0,
                 "combat_skill_offense_dualWield": 0,
                 "combat_skill_offense_drain": 0
+            },
+            "equipmentSlots": {
+                "mainHand": "",
+                "offHand": "",
+                "armor": "",
+                "helm": "",
+                "cape": "",
+                "gloves": "",
+                "boots": "",
+                "ring1": "",
+                "ring2": "",
+                "ring3": "",
+                "ring4": "",
+                "charm1": "",
+                "charm2": "",
+                "amulet": ""
             }
         },
 
-        "hero": {
-            "templates": ["common", "experience", "resources", "stats", "skills"]
+        "creature": {
+            "templates": ["common", "experience", "resources", "stats", "skills", "equip"]
         },
 
-        "enemy": {
-            "templates": ["common", "experience", "resources", "stats", "skills"]
+        "boss": {
+            "templates": ["common", "experience", "resources", "stats", "skills", "equip"],
+            "specialStuff": "To be determined"
         },
-        "npc": {
+        "other": {
             "templates": ["common"]
         }
 
@@ -328,16 +346,13 @@
         "templates": {
 
             "common": {
-                "fightingStyle": "None",
-                "tier": 0,
-                "level": 0,
-                "exp": 0,
-                "name": "",
-                "slot": "",
-                "slots_needed": 1,
+                "itemSubtype": "",
+                "fightingStyle": "ranged",
+                "tier": 1,
+                "level": 1,
+                "exp": 1,
                 "price": 0,
-                "description": "",
-                "active_q": false
+                "description": ""
             },
 
             "stats": {
@@ -472,7 +487,7 @@
 
         "equipment": {
             "templates": ["common", "stats", "skills"],
-            "name": "lol"
+            "equipmentSlots": "mainHand"
         },
         
         "spell": {
@@ -480,17 +495,15 @@
             "color": "",
             "type": "",
             "spellForce": 0
-            
         },
 
         "skill": {
             "templates": ["common", "stats", "actives"]
-            
         },
 
         "consumable": {
             "templates": ["common", "stats", "skills", "actives"],
-            "type": "",
+            "consumableType": "",
             "uses_total": 0,
             "uses_left": 0
         },

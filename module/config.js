@@ -8,9 +8,24 @@ intersection.fightingStyle = {
     magic: "Magic"
 };
 
-intersection.equipmentSlot = {
-    hands: "Hands", 
-    body: "Body",
+intersection.tier = {
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    10: 10
+}
+
+intersection.itemSubtype = {
+    weapon1h: "Weapon (1H)",
+    weapon2h: "Weapon (2H)",
+    shield: "Shield", 
+    armor: "Armor",
     helm: "Helm", 
     cape: "Cape",
     gloves: "Gloves",
@@ -19,9 +34,22 @@ intersection.equipmentSlot = {
     charm: "Charm",
     amulet: "Amulet",
     spell: "Spell",
-    skill: "Skill",
-    belt: "Belt", 
-    backpack: "Backpack"
+    skill: "Skill"
+};
+
+intersection.equipmentSlots = {
+    mainHand: "Main Hand",
+    offHand: "Off Hand",
+    armor: "Armor",
+    helm: "Helm", 
+    cape: "Cape",
+    gloves: "Gloves",
+    boots: "Boots",
+    ring: "Ring", 
+    charm: "Charm",
+    amulet: "Amulet",
+    backpack: "Backpack",
+    belt: "Belt"
 };
 
 intersection.spellColor = {
