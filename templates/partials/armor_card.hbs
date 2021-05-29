@@ -1,0 +1,9 @@
+<div class="armor-card">
+    <div class="armor-stats">
+        <img src={{img}} alt="WILL HAVE STATS HERE" width="60" height="60">
+        <p></p>
+        {{#if (compare data.fightingStyle "==" "melee")}}Mel.Off.: {{data.melee_def}}{{/if}}
+        {{#if (compare data.fightingStyle "==" "ranged")}}Rng.Off.: {{data.ranged_def}}{{/if}}
+        {{#if (compare data.fightingStyle "==" "magic")}}Mag.Off.: {{data.magic_def}}{{/if}}
+    </div>
+</div> 

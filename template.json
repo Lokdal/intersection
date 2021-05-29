@@ -8,9 +8,6 @@
         "templates": {
 
             "common": {
-                "name": "",
-                "image": "",
-                "token": "",
                 "description": ""
             },
 
@@ -36,196 +33,196 @@
 
             "resources": {
                 "life_points": {
-                    "min": 0,
                     "max": 1,
-                    "base": 1,
+                    "max_temp": 1,
                     "value": 1
                 },
                 "stamina_points": {
-                    "min": 0,
                     "max": 1,
-                    "base": 1,
+                    "max_temp": 1,
                     "value": 1
                 },
                 "mana_points": {
-                    "min": 0,
                     "max": 1,
-                    "base": 1,
+                    "max_temp": 1,
                     "value": 1
                 },
 
-                "combat_skill_points": {
-                    "min": 0,
-                    "max": 1,
-                    "base": 0,
-                    "value": 0
-                },
-                "melee_skill_points": {
-                    "min": 0,
-                    "max": 1,
-                    "base": 0,
-                    "value": 0
-                },
-                "ranged_skill_points": {
-                    "min": 0,
-                    "max": 1,
-                    "base": 0,
-                    "value": 0
-                },
-                "magic_skill_points": {
-                    "min": 0,
-                    "max": 1,
-                    "base": 0,
-                    "value": 0
-                },
-                "life_stam_mana_points": {
-                    "min": 0,
-                    "max": 1,
-                    "base": 0,
-                    "value": 0
-                }   
+                "combat_skill_points": 0,
+                "melee_skill_points": 0,
+                "ranged_skill_points": 0,
+                "magic_skill_points": 0,
+                "life_stam_mana_points": 0
+   
             },
             "stats": {
                 "melee_off": {
                     "base": 1,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "melee_def": {
                     "base": 1,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "melee_crit": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "melee_extraAtt": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "melee_cripple": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "melee_stun": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "melee_pierce": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "melee_dodge": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "melee_soak": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
 
                 "ranged_off": {
                     "base": 1,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "ranged_def": {
                     "base": 1,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "ranged_crit": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "ranged_extraAtt": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "ranged_cripple": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "ranged_stun": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "ranged_pierce": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "ranged_dodge": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "ranged_soak": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
 
                 "magic_off": {
                     "base": 1,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "magic_def": {
                     "base": 1,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "magic_crit": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "magic_extraAtt": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "magic_cripple": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "magic_stun": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "magic_pierce": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "magic_dodge": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
                 "magic_soak": {
                     "base": 0,
                     "equip": 0,
+                    "temp": 0,
                     "total": 0
                 },
 
                 "movement_speed": 1,
-                "perception": 50,
+                "perception": 20,
                 "concentration": 50,
 
                 "spellforce_demonic": 0,
@@ -303,7 +300,7 @@
                 "combat_skill_offense_dualWield": 0,
                 "combat_skill_offense_drain": 0
             },
-            "equipmentSlots": {
+            "equip": {
                 "mainHand": "",
                 "offHand": "",
                 "armor": "",
@@ -354,168 +351,52 @@
                 "price": 0,
                 "description": ""
             },
-
-            "stats": {
-                "life_points": 0,
-                "stamina_points": 0,
-                "mana_points": 0,
-
-                "melee_off": 0,
-                "melee_def": 0,
-                "melee_crit": 0,
-                "melee_extraAtt": 0,
-                "melee_cripple": 0,
-                "melee_stun": 0,
-                "melee_pierce": 0,
-                "melee_dodge": 0,
-                "melee_soak": 0,
-
-                "ranged_off": 0,
-                "ranged_def": 0,
-                "ranged_crit": 0,
-                "ranged_extraAtt": 0,
-                "ranged_cripple": 0,
-                "ranged_stun": 0,
-                "ranged_pierce": 0,
-                "ranged_dodge": 0,
-                "ranged_soak": 0,
-
-                "magic_off": 0,
-                "magic_def": 0,
-                "magic_crit": 0,
-                "magic_extraAtt": 0,
-                "magic_cripple": 0,
-                "magic_stun": 0,
-                "magic_pierce": 0,
-                "magic_dodge": 0,
-                "magic_soak": 0,
-
-                "concentration": 0,
-                "spellforce_demonic": 0,
-                "spellforce_forces": 0,
-                "spellforce_necromancy": 0,
-                "spellforce_nature": 0,
-                "spellforce_dimension": 0,
-                "spellforce_mind": 0,
-                "spellforce_divine": 0,
-                "spellforce_life": 0,
-                "spellforce_creation": 0,
-
-                "movement_speed": 0,
-                "perception": 0
-            },
-
-            "skills": {
-                "melee_skill_armor": 0,
-                "melee_skill_combat": 0,
-                "melee_skill_crit": 0,
-                "melee_skill_extraAtt": 0,
-                "melee_skill_cripple": 0,
-                "melee_skill_stun": 0,
-                "melee_skill_stabbingWeapons": 0,
-                "melee_skill_stab_perforate": 0,
-                "melee_skill_stab_injure": 0,
-                "melee_skill_slashingWeapons": 0,
-                "melee_skill_slash_hack": 0,
-                "melee_skill_slash_furious": 0,
-                "melee_skill_crushingWeapons": 0,
-                "melee_skill_crush_smash": 0,
-                "melee_skill_crush_concuss": 0,
-
-                "ranged_skill_armor": 0,
-                "ranged_skill_combat": 0,
-                "ranged_skill_crit": 0,
-                "ranged_skill_extraAtt": 0,
-                "ranged_skill_cripple": 0,
-                "ranged_skill_stun": 0,
-                "ranged_skill_pierce": 0,
-                "ranged_skill_throwingWeapons": 0,
-                "ranged_skill_thrown_precise": 0,
-                "ranged_skill_thrown_flurry": 0,
-                "ranged_skill_thrown_aimEyes": 0,
-                "ranged_skill_shootingWeapons": 0,
-                "ranged_skill_shoot_takeAim": 0,
-                "ranged_skill_shoot_longRange": 0,
-                "ranged_skill_shoot_pinDown": 0,
-
-                "magic_skill_armor_mastery": 0,
-                "magic_skill_focus_mastery": 0,
-                "magic_skill_adept": 0,
-                "magic_skill_black_mastery": 0,
-                "magic_skill_black_demonic": 0,
-                "magic_skill_black_forces": 0,
-                "magic_skill_black_necromancy": 0,
-                "magic_skill_grey_mastery": 0,
-                "magic_skill_grey_nature": 0,
-                "magic_skill_grey_dimensions": 0,
-                "magic_skill_grey_mind": 0,                
-                "magic_skill_white_mastery": 0,
-                "magic_skill_white_divine": 0,
-                "magic_skill_white_life": 0,
-                "magic_skill_white_creation": 0,
-
-                "combat_skill_control": 0,
-                "combat_skill_control_counterspell": 0,
-                "combat_skill_control_dash": 0,
-                "combat_skill_control_distract": 0,
-                "combat_skill_control_taunt": 0,
-                "combat_skill_defense": 0,
-                "combat_skill_defense_reflexes": 0,
-                "combat_skill_defense_predict": 0,
-                "combat_skill_defense_resist": 0,
-                "combat_skill_defense_soak": 0,
-                "combat_skill_offense": 0,
-                "combat_skill_offense_counter": 0,
-                "combat_skill_offense_coupDeGrace": 0,
-                "combat_skill_offense_dualWield": 0,
-                "combat_skill_offense_drain": 0
-            },
             
-            "actives": {
+            "active": {
                 "time_prepare": 0,
-                "time_total": 0,
-                "time_left": 0,
-                
                 "cost_MP": 0,
                 "cost_SP": 0,
                 "cost_LP": 0,
-
                 "range": 0,
                 "numTargets": 1
+            },
+
+            "stackable": {
+                "uses_total": 1,
+                "uses_left": 1
             }
         },
 
         "equipment": {
-            "templates": ["common", "stats", "skills"],
-            "equipmentSlots": "mainHand"
+            "templates": ["common"],
+            "equipmentSlots": ""
         },
         
         "spell": {
-            "templates": ["common", "stats", "actives"],
-            "color": "",
-            "type": "",
+            "templates": ["common", "active"],
+            "spellColor": "",
+            "spellType": "",
             "spellForce": 0
         },
 
         "skill": {
-            "templates": ["common", "stats", "actives"]
+            "templates": ["common", "active"]
         },
 
         "consumable": {
-            "templates": ["common", "stats", "skills", "actives"],
-            "consumableType": "",
-            "uses_total": 0,
-            "uses_left": 0
+            "templates": ["common", "active", "stackable"],
+            "consumableType": ""
+            
         },
 
         "resource": {
-            "templates": ["common"],
-            "type": ""
+            "templates": ["common", "stackable"],
+            "resourceType": ""
         },
 
         "other": {
             "templates": ["common"],
-            "type": ""
+            "otherType": "Other"
         }
     }
 }

@@ -19,7 +19,7 @@
 .intersection.sheet.actor .sheet-content {
   display: grid;
   grid-template-columns: repeat(22, 40px);
-  grid-template-rows: 160px 140px 1fr;
+  grid-template-rows: 160px 140px 1fr 1fr;
 }
 .intersection.sheet.actor .sheet-content .summary_table {
   grid-column-start: 2;
@@ -61,24 +61,24 @@
   grid-template-columns: repeat(3, 64px);
   grid-template-rows: repeat(3, 64px) 16px repeat(3, 64px);
 }
-.intersection.sheet.actor .sheet-content .skill_table {
+.intersection.sheet.actor .sheet-content .skills_table {
   grid-column-start: 8;
   grid-column-end: 21;
   grid-row-start: 3;
   grid-row-end: 4;
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(4, auto) 20px;
 }
-.intersection.sheet.actor .sheet-content .col_table {
+.intersection.sheet.actor .sheet-content .cell_header {
   text-align: center;
   font-size: 12pt;
-}
-.intersection.sheet.actor .sheet-content .col_table .cell_header {
   font-weight: bold;
   height: 2em;
   word-wrap: normal;
 }
-.intersection.sheet.actor .sheet-content .col_table .cell_data {
+.intersection.sheet.actor .sheet-content .cell_data {
+  text-align: center;
+  font-size: 12pt;
   height: 1.3em;
   margin-top: 0px;
   margin-right: 0px;

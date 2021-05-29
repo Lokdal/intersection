@@ -4,7 +4,15 @@ import actor_sheet from "./module/sheets/actor_sheet.js";
 
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
-        "systems/intersection/templates/partials/weapon_card.hbs"
+        "systems/intersection/templates/partials/actor_points_table.hbs",
+        "systems/intersection/templates/partials/actor_stats_table.hbs",
+        "systems/intersection/templates/partials/actor_equip_table.hbs",
+        "systems/intersection/templates/partials/weapon_card.hbs",
+        "systems/intersection/templates/partials/armor_card.hbs",
+        "systems/intersection/templates/partials/accessory_card.hbs",
+        "systems/intersection/templates/partials/jewelry_card.hbs",
+        "systems/intersection/templates/partials/skill_card.hbs",
+        "systems/intersection/templates/partials/spell_card.hbs"
     ];
     return loadTemplates(templatePaths);
 };
@@ -25,6 +33,7 @@ Hooks.once("init", function() {
     console.log("Intersection | Load Handlebars Templates");
     preloadHandlebarsTemplates();
 
+    // This is a helper function to be able to compare values in Handlebars
     Handlebars.registerHelper("compare", function(a, operator, b){
         if (arguments.length < 3) {
             throw new Error('{{compare}} expects 4 arguments');

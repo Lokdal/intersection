@@ -1,0 +1,1177 @@
+<div>
+    <!-- Buttons to change page view -->
+    <button type="action" name="act_stats">STATS</button>
+    <button type="action" name="act_equip">EQUIP</button>
+    <button type="action" name="act_melee">MELEE</button>
+    <button type="action" name="act_ranged">RANGED</button>
+    <button type="action" name="act_magic">MAGIC</button>
+</div>
+
+<!-- This input will trigger the CSS to change the sheet -->
+<input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="stats" />
+
+<div class="sheet-stats">
+
+    <h1>Character stats</h1>
+    <hr>
+    <table>
+        <tr>
+            <th style="width: 100px; text-align: center;"></th>
+            <th style="width: 50px; text-align: center;">Current</th>
+            <th style="width: 50px; text-align: center;">Max</th>
+            <th style="width: 50px; text-align: center;">Base</th>
+            <th style="width: 50px; text-align: center;">Equip</th>
+            <th style="width: 50px; text-align: center;">Temp</th>
+            <th style="width: 80px; text-align: center;"> </th>
+            <th style="width: 80px; text-align: center;">Combat</th>
+            <th style="width: 50px; text-align: center;"> </th>
+            <th style="width: 80px; text-align: center;"> </th>
+            <th style="width: 100px; text-align: left;">Fighting Style</th>
+            <th style="width: 50px; text-align: center;">XP</th>
+            <th style="width: 50px; text-align: center;">Level</th>
+        </tr>
+        <tr>
+            <td>Life Points</td>
+            <td><input type="number" name="attr_CurrentLifePoints" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_CurrentLifePoints_max" value="0" readonly="true" /></td>
+            <td><input title="Manual entry upon level-up" type="number" name="attr_BaseLifePoints" value="0" /></td>
+            <td><input type="number" name="attr_EquipLifePoints" value="0" /></td>
+            <td><input type="number" name="attr_TempLifePoints" value="0" /></td>
+            <td></td>
+            <td>XP</td>
+            <td><input type="number" name="attr_CombatExp" value="0" readonly="true"/></td>
+            <td></td>
+            <td>Melee</td>
+            <td><input type="number" name="attr_MeleeExp" value="0" /></td>
+            <td><input type="number" name="attr_MeleeLevel" value="0" /></td>
+        </tr>
+        <tr>
+            <td>Stamina Points</td>
+            <td><input type="number" name="attr_CurrentStaminaPoints" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_CurrentStaminaPoints_max" value="0" readonly="true" /></td>
+            <td><input title="Manual entry upon level-up" type="number" name="attr_BaseStaminaPoints" value="0" /></td>
+            <td><input type="number" name="attr_EquipStaminaPoints" value="0" /></td>
+            <td><input type="number" name="attr_TempStaminaPoints" value="0" /></td>
+            <td></td>
+            <td>Level</td>
+            <td><input type="number" name="attr_CombatLevel" value="0" readonly="true"/></td>
+            <td></td>
+            <td>Ranged</td>
+            <td><input type="number" name="attr_RangedExp" value="0" /></td>
+            <td><input type="number" name="attr_RangedLevel" value="0" /></td>
+        </tr>
+        <tr>
+            <td>Mana Points</td>
+            <td><input type="number" name="attr_CurrentManaPoints" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_CurrentManaPoints_max" value="0" readonly="true" /></td>
+            <td><input title="Manual entry upon level-up" type="number" name="attr_BaseManaPoints" value="0" /></td>
+            <td><input type="number" name="attr_EquipManaPoints" value="0" /></td>
+            <td><input type="number" name="attr_TempManaPoints" value="0" /></td>
+            <td></td>
+            <td>XP on items </td>
+            <td><input type="number" name="attr_ExpOnItems" readonly="true" value="0" readonly="true"/></td>
+            <td></td>
+            <td>Magic</td>
+            <td><input type="number" name="attr_MagicExp" value="0" /></td>
+            <td><input type="number" name="attr_MagicLevel" value="0" /></td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th style="width: 100px; text-align: center;"></th>
+            <th style="width: 50px; text-align: center;">Total</th>
+            <th style="width: 50px; text-align: center;">Base</th>
+            <th style="width: 50px; text-align: center;">Equip</th>
+            <th style="width: 50px; text-align: center;">Temp</th>
+            <th style="width: 50px; text-align: center;">Notes</th>
+        </tr>
+        <tr>
+            <td class="meleeoffensetooltip">Melee Offense</td>
+            <td><input type="number" name="attr_TotalMeleeOffense" value="0" readonly="true" /></td>
+            <td><input title="Manual entry upon level-up" type="number" name="attr_BaseMeleeOffense" value="0" />
+            </td>
+            <td><input type="number" name="attr_EquipMeleeOffense" value="0" /></td>
+            <td><input type="number" name="attr_TempMeleeOffense" value="0" /></td>
+            <td><input type="text" name="attr_MeleeOffenseNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td>Ranged Offense</td>
+            <td><input type="number" name="attr_TotalRangedOffense" value="0" readonly="true" /></td>
+            <td><input title="Manual entry upon level-up" type="number" name="attr_BaseRangedOffense" value="0" />
+            </td>
+            <td><input type="number" name="attr_EquipRangedOffense" value="0" /></td>
+            <td><input type="number" name="attr_TempRangedOffense" value="0" /></td>
+            <td><input type="text" name="attr_RangedOffenseNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td>Magic Offense</td>
+            <td><input type="number" name="attr_TotalMagicOffense" value="0" readonly="true" /></td>
+            <td><input title="Manual entry upon level-up" type="number" name="attr_BaseMagicOffense" value="0" />
+            </td>
+            <td><input type="number" name="attr_EquipMagicOffense" value="0" /></td>
+            <td><input type="number" name="attr_TempMagicOffense" value="0" /></td>
+            <td><input type="text" name="attr_MagicOffenseNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td>Melee Defense</td>
+            <td><input type="number" name="attr_TotalMeleeDefense" value="0" readonly="true" /></td>
+            <td><input title="Manual entry upon level-up" type="number" name="attr_BaseMeleeDefense" value="0" />
+            </td>
+            <td><input type="number" name="attr_EquipMeleeDefense" value="0" /></td>
+            <td><input type="number" name="attr_TempMeleeDefense" value="0" /></td>
+            <td><input type="text" name="attr_MeleeDefenseNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td>Ranged Defense</td>
+            <td><input type="number" name="attr_TotalRangedDefense" value="0" readonly="true" /></td>
+            <td><input title="Manual entry upon level-up" type="number" name="attr_BaseRangedDefense" value="0" />
+            </td>
+            <td><input type="number" name="attr_EquipRangedDefense" value="0" /></td>
+            <td><input type="number" name="attr_TempRangedDefense" value="0" /></td>
+            <td><input type="text" name="attr_RangedDefenseNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td>Magic Defense</td>
+            <td><input type="number" name="attr_TotalMagicDefense" value="0" readonly="true" /></td>
+            <td><input title="Manual entry upon level-up" type="number" name="attr_BaseMagicDefense" value="0" />
+            </td>
+            <td><input type="number" name="attr_EquipMagicDefense" value="0" /></td>
+            <td><input type="number" name="attr_TempMagicDefense" value="0" /></td>
+            <td><input type="text" name="attr_MagicDefenseNotes" style="width:400px" value="" /></td>
+        </tr>
+    </table>
+    <hr />
+    <h1>Combat Type</h1>
+    <table>
+        <tr>
+            <th style="text-align: center;"></th>
+            <th style="text-align: center;">Cost</th>
+            <th style="width: 60px; text-align: center;">Current<br>Level</th>
+            <th style="width: 60px; text-align: center;">Max<br>Level</th>
+            <th style="text-align: center;">Effect</th>
+        </tr>
+
+        <tr>
+            <td><b><span style="white-space: nowrap;">Control</span></b></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_Control" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_Control_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Once per game, 50% to cancel an attack or spell from an enemy of up to
+                    <b><span style="color: #5e9ca0;">tier </span>
+                        <span style="color: #5e9ca0;" type="number" name="attr_ControlValue1" value="Error" /></b> within 3 hexes [1 per S.L.]
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Counterspell</span></td>
+            <td>(2 MP, when a spell is cast)</td>
+            <td style="text-align: center;"><input type="number" name="attr_Counterspell" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_Counterspell_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Forces a target of up to <b><span style="color: #5e9ca0;">tier </span><span
+                            style="color: #5e9ca0;" type="number" name="attr_CounterspellValue1"
+                            value="Error" /></b> within 2 hexes to make a Concentration Roll upon casting [1 per S.L.]
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Dash</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_Dash" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_Dash_max" value="10" readonly="true" />
+            </td>
+            <td>
+                <p><br>The player has <b><span style="color: #5e9ca0;" type="number" name="attr_DashValue1"
+                            value="Error"></span><span style="color: #5e9ca0;">% chance</span></b> to move 2 hexes [15% per S.L.] and <b><span style="color: #5e9ca0;" type="number" name="attr_DashValue2"
+                            value="Error"></span><span style="color: #5e9ca0;">% chance</span></b> to move 3 hexes anytime he moves [15% per S.L. -100%]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Distract</span></td>
+            <td>(2 SP, when an action is declared)</td>
+            <td style="text-align: center;"><input type="number" name="attr_Distract" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_Distract_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>50% chance to cancel the current action (other than casting) of a target of up to
+                    <b><span style="color: #5e9ca0;">tier </span>
+                        <span style="color: #5e9ca0;" type="number" name="attr_DistractValue1" value="Error" /></b> [1 per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Taunt</span></td>
+            <td>(2 SP/MP, full action)</td>
+            <td style="text-align: center;"><input type="number" name="attr_Taunt" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_Taunt_max" value="10" readonly="true" />
+            </td>
+            <td>
+                <p><br>Forces nearby creatures to attack the player for 2 rounds. Affects a total of up to <b><span
+                            style="color: #5e9ca0;" type="number" name="attr_TauntValue1" value="Error" /></b> creature levels [15 per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><b><span style="white-space: nowrap;"> Defense</span></b></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_Defense" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_Defense_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Once per game, dodge an attack or spell of up to <b><span style="color: #5e9ca0;">tier
+                        </span><span style="color: #5e9ca0;" type="number" name="attr_DefenseValue1"
+                            value="Error" /></b>  [1 per S.L.]
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Excellent Reflexes</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_ExcellentReflexes" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_ExcellentReflexes_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>The player gets Defense Bonuses to his Body Armor.<br> Sronger Defense Level: <b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;"
+                            type="number" name="attr_ExcellentReflexesValue1" value="Error" /></b><br> Same Defense Level: <b><span style="color: #5e9ca0;">+</span><span
+                            style="color: #5e9ca0;" type="number" name="attr_ExcellentReflexesValue2"
+                            value="Error" /></b><br> Weaker Defense Level: <b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_ExcellentReflexesValue3" value="Error" /></b><br>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <p>
+                    <table width="400" border="1" style="text-align: center;margin-left:auto;margin-right:auto">
+                        <tbody>
+                            <tr>
+                                <td width="35">Level</td>
+                                <td width="35">Str. Def. Lvl.</td>
+                                <td width="35">Same Def. Lvl.</td>
+                                <td width="35">Weak. Def. Lvl.</td>
+                                <td width="35">Level</td>
+                                <td width="35">Str. Def. Lvl.</td>
+                                <td width="35">Same Def. Lvl.</td>
+                                <td width="35">Weak. Def. Lvl.</td>
+                            </tr>
+                            <tr>
+                                <td width="35">1</td>
+                                <td width="35">+1</td>
+                                <td width="35">-</td>
+                                <td width="35">-</td>
+                                <td width="35">6</td>
+                                <td width="35">+2</td>
+                                <td width="35">+2</td>
+                                <td width="35">+2</td>
+                            </tr>
+                            <tr>
+                                <td width="35">2</td>
+                                <td width="4">+1</td>
+                                <td width="35">+1</td>
+                                <td width="35">-</td>
+                                <td width="35">7</td>
+                                <td width="35">+3</td>
+                                <td width="35">+2</td>
+                                <td width="35">+2</td>
+                            </tr>
+                            <tr>
+                                <td width="35">3</td>
+                                <td width="35">+1</td>
+                                <td width="35">+1</td>
+                                <td width="35">+1</td>
+                                <td width="35">8</td>
+                                <td width="35">+3</td>
+                                <td width="35">+3</td>
+                                <td width="35">+2</td>
+                            </tr>
+                            <tr>
+                                <td width="35">4</td>
+                                <td width="35">+2</td>
+                                <td width="35">+1</td>
+                                <td width="35">+1</td>
+                                <td width="35">9</td>
+                                <td width="35">+3</td>
+                                <td width="35">+3</td>
+                                <td width="35">+3</td>
+                            </tr>
+                            <tr>
+                                <td width="35">5</td>
+                                <td width="35">+2</td>
+                                <td width="35">+2</td>
+                                <td width="35">+1</td>
+                                <td width="35">10</td>
+                                <td width="35">+4</td>
+                                <td width="35">+4</td>
+                                <td width="35">+4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Predict Action</span></b>
+            </td>
+            <td>(3 SP/MP, full action)</td>
+            <td style="text-align: center;"><input type="number" name="attr_PredictAction" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_PredictAction_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>A target within 2 hexes loses <b><span style="color: #5e9ca0;" type="number"
+                            name="attr_PredictActionValue1" value="Error" /></b> Main Offense Level on the next round [1 per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Resist Attack</span></b>
+            </td>
+            <td>(2 SP/MP, when declared as a target)</td>
+            <td style="text-align: center;"><input type="number" name="attr_ResistAttack" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_ResistAttack_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>50% chance to dodge a weapon or a spell of up to <b><span style="color: #5e9ca0;">tier
+                        </span><span style="color: #5e9ca0;" type="number" name="attr_ResistAttackValue1"
+                            value="Error" /></b> before the player's defense roll [1 per S.L.]
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Soak Damage</span></b>
+            </td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_SoakDamage" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_SoakDamage_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_SoakDamageValue1" value="Error"></span><span style="color: #5e9ca0;">%
+                            chance</span></b> [3% per S.L.] to negate up to <b><span style="color: #5e9ca0;"
+                            type="number" name="attr_SoakDamageValue2" value="Error"></span><span
+                            style="color: #5e9ca0;"> damage</span></b> on each attack or spell [3 per S.L.]</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><b><span style="white-space: nowrap;"> Offense</span></b></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_Offense" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_Offense_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Once per game, a failed attack against an enemy of up to <b><span
+                            style="color: #5e9ca0;">tier </span><span style="color: #5e9ca0;" type="number"
+                            name="attr_OffenseValue1" value="Error" /></b> hits and deals <b><span style="color: #5e9ca0;"
+                            type="number" name="attr_OffenseValue2" value="Error"></span><span
+                            style="color: #5e9ca0;"> damage</span></b> [1 per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Counterattack</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_Counterattack" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_Counterattack_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>When hit, the player has 50% chance to deal <b><span style="color: #5e9ca0;" type="number"
+                            name="attr_CounterattackValue1" value="Error"></span><span style="color: #5e9ca0;">
+                            damage</span></b> to the attacker if they are within the player's current attack range [1 per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Coup de grâce</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_CoupDeGrace" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_CoupDeGrace_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>If a player’s action brings a creature to <b><span style="color: #5e9ca0;" type="number"
+                            name="attr_CoupDeGraceValue1" value="Error"></span><span style="color: #5e9ca0;">
+                            LP</span></b> or less, they have 50% chance to bring it down to 0 LP [2 per S.P.]
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Dual Wielding Mastery</span></td>
+            <td>(Passive, on hit)</td>
+            <td style="text-align: center;"><input type="number" name="attr_DualWieldingMastery" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_DualWieldingMastery_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Allows the player to attack simultaneously with a one-handed weapon of up to <b><span
+                            style="color: #5e9ca0;">tier </span><span style="color: #5e9ca0;" type="number"
+                            name="attr_DualWieldingMasteryValue1" value="Error" /></b> in each hand [1 per S.L.]<br>
+                    <b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_DualWieldingMasteryValue2" value="Error"></span><span
+                            style="color: #5e9ca0;">% chance</span></b> to attack with the second weapon on every attack with the first weapon [9% per S.L.]
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Energy Drain</span></td>
+            <td>(1 SP/MP, on attack, needs to hit)</td>
+            <td style="text-align: center;"><input type="number" name="attr_EnergyDrain" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_EnergyDrain_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>The target loses <b><span style="color: #5e9ca0;" type="number" name="attr_EnergyDrainValue1"
+                            value="Error" /></b> Mana or Stamina (whichever is higher) [3 per S.L.]</p>
+            </td>
+        </tr>
+    </table>
+
+
+</div>
+
+<div class="sheet-equip">
+
+    <fieldset class="repeating_items">
+        <input type="hidden" name="attr_item_lvl"/>
+        <input type="hidden" name="attr_item_lvl"/>
+
+
+
+        
+        <div class='3colrow'>
+            <div class='col' style="width:120px">
+                <select name="attr_item_category" class="item_category">
+                    <option value="item_category_equip" selected>Equipment</option>
+                    <option value="item_category_resource">Resources & Crafting</option>
+                    <option value="item_category_consumable">Consumables</option>
+                    <option value="item_category_other">Quest & Other</option>
+                </select>
+            </div>
+          
+            <div class='col' style="width:100px">
+                <input type="checkbox" name="attr_item_category" class="sheet-hidden" value="item_category_equip" />
+                <input type="checkbox" name="attr_item_category" class="sheet-hidden" value="item_category_resource" />
+                <input type="checkbox" name="attr_item_category" class="sheet-hidden" value="item_category_consumable" />
+                <input type="checkbox" name="attr_item_category" class="sheet-hidden" value="item_category_other" />
+
+                <div class="item_category_equip">
+                    <select name="attr_equip_subcategory" class="item_category_equip">
+                        <option value="equip_subcategory_weapon" selected>Weapon</option>
+                        <option value="equip_subcategory_shield">Shield</option>
+                        <option value="equip_subcategory_armor">Armor</option>
+                        <option value="equip_subcategory_helm">Helm</option>
+                        <option value="equip_subcategory_cape">Cape</option>
+                        <option value="equip_subcategory_gloves">Gloves</option>
+                        <option value="equip_subcategory_boots">Boots</option>
+                        <option value="equip_subcategory_ring">Ring</option>
+                        <option value="equip_subcategory_charm">Charm</option>
+                        <option value="equip_subcategory_amulet">Amulet</option>
+                    </select>    
+                </div>
+                
+                <div class="item_category_resource">
+                    <select name="attr_resource_subcategory" class="item_category_resource">
+                        <option value="resource_subcategory_metal" selected>Metal</option>
+                        <option value="resource_subcategory_leather">Leather</option>
+                        <option value="resource_subcategory_wood">Wood</option>
+                        <option value="resource_subcategory_fiber">Fiber</option>
+                        <option value="resource_subcategory_gem">Gem</option>
+                        <option value="resource_subcategory_plant">Plant</option>
+                        <option value="resource_subcategory_reding">Red Ingredient</option>
+                        <option value="resource_subcategory_greening">Green Ingredient</option>
+                        <option value="resource_subcategory_blueing">Blue Ingredient</option>
+                        <option value="resource_subcategory_acid">Acid</option>
+                        <option value="resource_subcategory_fertilizer">Fertilizer</option>
+                        <option value="resource_subcategory_thickener">Thickener</option>
+                        <option value="resource_subcategory_weirdrock">Weird Rock</option>
+                    </select>  
+                </div>
+        
+                <div class="item_category_consumable">
+                    <select name="attr_consumable_subcategory" class="item_category_consumable">
+                        <option value="consumable_subcategory_healthpot" selected>Health Potion</option>
+                        <option value="consumable_subcategory_staminapot">Stamina Potion</option>
+                        <option value="consumable_subcategory_manapot">Mana Potion</option>
+                        <option value="consumable_subcategory_enhancer">Enhancer</option>
+                        <option value="consumable_subcategory_oil">Oil</option>
+                        <option value="consumable_subcategory_bomb">Bomb</option>
+                        <option value="consumable_subcategory_morpher">Morpher</option>
+                    </select>  
+                </div>
+        
+                <div class="item_category_other">OTHER</div>
+            </div>
+          
+            <div class='col'>
+                <table>
+                    <tr>
+                        <th style="width: 100px; text-align: center;"></th>
+                        <th style="width: 50px; text-align: center;">Tier</th>
+                        <th style="width: 50px; text-align: center;">Level</th>
+                        <th style="width: 50px; text-align: center;">Exp</th>
+                        <th style="width: 50px; text-align: center;">Mel. Off.</th>
+                        <th style="width: 50px; text-align: center;">Rng. Off.</th>
+                        <th style="width: 50px; text-align: center;">Mag. Off.</th>
+                        <th style="width: 50px; text-align: center;">Mel. Off.</th>
+                        <th style="width: 50px; text-align: center;">Rng. Off.</th>
+                        <th style="width: 50px; text-align: center;">Mag. Off.</th>
+                    </tr>
+      
+                </table>
+            </div>
+        </div>
+
+    </fieldset>
+
+</div>
+
+<div class="sheet-melee">
+
+    <h1>Melee Attack Bonus</h1>
+    <table>
+        <tr>
+            <th style="width: 50px; text-align: center;"></th>
+            <th style="width: 100px; text-align: center;"></th>
+            <th style="width: 50px; text-align: center;">Total</th>
+            <th style="width: 50px; text-align: center;">Base</th>
+            <th style="width: 50px; text-align: center;">Equip</th>
+            <th style="width: 50px; text-align: center;">Temp</th>
+            <th style="width: 50px; text-align: center;">Notes</th>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Critical Hit (%)</td>
+            <td><input type="number" name="attr_TotalMeleeCriticalHit" value="0" readonly="true" /></td>
+            <td><input title="Melee Critical Hit Skill Level * 3% + Melee Combat Mastery Skill Level * 1%" type="number" name="attr_BaseMeleeCriticalHit" value="0" readonly="true" />
+                <td><input type="number" name="attr_EquipMeleeCriticalHit" value="0" /></td>
+                <td><input type="number" name="attr_TempMeleeCriticalHit" value="0" /></td>
+                <td><input type="text" name="attr_CriticalHitNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Extra Attack (%)</td>
+            <td><input type="number" name="attr_TotalMeleeExtraAttack" value="0" readonly="true" /></td>
+            <td><input title="Melee Extra Attack Skill Level * 3% + Melee Combat Mastery * 2%" type="number" name="attr_BaseMeleeExtraAttack" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipMeleeExtraAttack" value="0" /></td>
+            <td><input type="number" name="attr_TempMeleeExtraAttack" value="0" /></td>
+            <td><input type="text" name="attr_ExtraAttackNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Cripple (%)</td>
+            <td><input type="number" name="attr_TotalMeleeCripple" value="0" readonly="true" /></td>
+            <td><input title="Melee Cripple Skill Level * 2%" type="number" name="attr_BaseMeleeCripple" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipMeleeCripple" value="0" /></td>
+            <td><input type="number" name="attr_TempMeleeCripple" value="0" /></td>
+            <td><input type="text" name="attr_MeleeCrippleNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Stun (%)</td>
+            <td><input type="number" name="attr_TotalMeleeStun" value="0" readonly="true" /></td>
+            <td><input title="Melee Stun Skill Level * 3%" type="number" name="attr_BaseMeleeStun" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipMeleeStun" value="0" /></td>
+            <td><input type="number" name="attr_TempMeleeStun" value="0" /></td>
+            <td><input type="text" name="attr_MeleeStunNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Pierce (%)</td>
+            <td><input type="number" name="attr_TotalMeleePierce" value="0" readonly="true" /></td>
+            <td><input type="hidden" name="attr_BaseMeleePierce" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipMeleePierce" value="0" /></td>
+            <td><input type="number" name="attr_TempMeleePierce" value="0" /></td>
+            <td><input type="text" name="attr_MeleePierceNotes" style="width:400px" value="" /></td>
+        </tr>
+    </table>
+    <hr />
+    <h1>Melee Skills</h1>
+    <table>
+        <tr>
+            <th style="text-align: center;"></th>
+            <th style="text-align: center;">Cost</th>
+            <th style="width: 60px; text-align: center;">Current<br>Level</th>
+            <th style="width: 60px; text-align: center;">Max<br>Level</th>
+            <th style="text-align: center;">Effect</th>
+        </tr>
+        <tr>
+            <td><b><span style="white-space: nowrap;"> Melee Armor Mastery</span></b></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_MeleeArmorMastery" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_MeleeArmorMastery_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Allows the player to use and craft melee body armors and shields of up to <b><span
+                            style="color: #5e9ca0;">level </span><span style="color: #5e9ca0;" type="number"
+                            name="attr_MeleeArmorMasteryValue1" value="Error" /></b> [10 per S.L.]
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Melee Combat Mastery</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_MeleeCombatMastery" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_MeleeCombatMastery_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_MeleeCombatMasteryValue1" value="Error"></span><span
+                            style="color: #5e9ca0;">% chance</span></b> to make a critical hit [1% per S.L.], and <b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_MeleeCombatMasteryValue2" value="Error"></span><span
+                            style="color: #5e9ca0;">% chance</span></b> to attack a second time using melee weapons [1% per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Cripple</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_MeleeCripple" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_MeleeCripple_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_MeleeCrippleValue1" value="Error"></span><span style="color: #5e9ca0;">%
+                            chance</span></b> to cripple when using melee weapons [3% per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Critical Hit</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_MeleeCriticalHit" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_MeleeCriticalHit_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_MeleeCriticalHitValue1" value="Error"></span><span style="color: #5e9ca0;">%
+                            chance</span></b> to make a critical hit when using melee weapons [3% per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Extra Attack</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_MeleeExtraAttack" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_MeleeExtraAttack_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_MeleeExtraAttackValue1" value="Error"></span><span style="color: #5e9ca0;">%
+                            chance</span></b> to attack a second time when using melee weapons [3% per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Stun</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_MeleeStun" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_MeleeStun_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_MeleeStunValue1" value="Error"></span><span style="color: #5e9ca0;">%
+                            chance</span></b> to stun for 1 round when using melee weapons [3% per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Stabbing Weapons Mastery</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_StabbingWeaponsMastery" value="0" />
+            </td>
+            <td style="text-align: center;"><input type="number" name="attr_StabbingWeaponsMastery_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Allows the player to use and craft stabbing weapons of up to <b><span
+                            style="color: #5e9ca0;">level </span><span style="color: #5e9ca0;" type="number"
+                            name="attr_StabbingWeaponsMasteryValue1" value="Error" /></b> [10 per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Perforate</span></td>
+            <td>(2 SP, on attack)</td>
+            <td style="text-align: center;"><input type="number" name="attr_Perforate" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_Perforate_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Usable with stabbing weapons, <b><span style="color: #5e9ca0;">+</span><span
+                            style="color: #5e9ca0;" type="number" name="attr_PerforateValue1"
+                            value="Error"></span></b> Melee Offense Level on the current attack [0.5 S.L + 1]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Injure</span></td>
+            <td>(1 SP, on attack)</td>
+            <td style="text-align: center;"><input type="number" name="attr_Injure" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_Injure_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Usable with stabbing weapons, <b><span style="color: #5e9ca0;">+</span><span
+                            style="color: #5e9ca0;" type="number" name="attr_InjureValue1"
+                            value="Error"></span><span style="color: #5e9ca0;">% chance</span></b> to Cripple on the current attack [6% per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Slashing Weapons Mastery</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_SlashingWeaponsMastery" value="0" />
+            </td>
+            <td style="text-align: center;"><input type="number" name="attr_SlashingWeaponsMastery_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Allows the player to use and craft slashing weapons of up to <b><span
+                            style="color: #5e9ca0;">level </span><span style="color: #5e9ca0;" type="number"
+                            name="attr_SlashingWeaponsMasteryValue1" value="Error" /></b> [10 per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Hack</span></td>
+            <td>(2 SP, on attack)</td>
+            <td style="text-align: center;"><input type="number" name="attr_Hack" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_Hack_max" value="10" readonly="true" />
+            </td>
+            <td>
+                <p><br>Usable with slashing weapons, <b><span style="color: #5e9ca0;">+</span><span
+                            style="color: #5e9ca0;" type="number" name="attr_HackValue1" value="Error"></span></b> Melee Offense Level on the current attack [0.5 S.L + 1]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Furious Swipes</span></td>
+            <td>(1 SP, on attack)</td>
+            <td style="text-align: center;"><input type="number" name="attr_FuriousSwipes" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_FuriousSwipes_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Usable with slashing weapons, <b><span style="color: #5e9ca0;">+</span><span
+                            style="color: #5e9ca0;" type="number" name="attr_FuriousSwipesValue1"
+                            value="Error"></span><span style="color: #5e9ca0;">% chance</span></b> to Extra Attack on the current attack [6% per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Crushing Weapons Mastery</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_CrushingWeaponsMastery" value="0" />
+            </td>
+            <td style="text-align: center;"><input type="number" name="attr_CrushingWeaponsMastery_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Allows the player to use and craft crushing weapons of up to <b><span
+                            style="color: #5e9ca0;">level </span><span style="color: #5e9ca0;" type="number"
+                            name="attr_CrushingWeaponsMasteryValue1" value="Error" /></b> [10 per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Smash</span></td>
+            <td>(2 SP, on attack)</td>
+            <td style="text-align: center;"><input type="number" name="attr_Smash" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_Smash_max" value="10" readonly="true" />
+            </td>
+            <td>
+                <p><br>Usable with crushing weapons, <b><span style="color: #5e9ca0;">+</span><span
+                            style="color: #5e9ca0;" type="number" name="attr_SmashValue1" value="Error"></span></b> Melee Offense Level on the current attack [0.5 S.L + 1]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Stun</span></td>
+            <td>(1 SP, on attack)</td>
+            <td style="text-align: center;"><input type="number" name="attr_CrushingStun" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_CrushingStun_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Usable with crushing weapons, <b><span style="color: #5e9ca0;">+</span><span
+                            style="color: #5e9ca0;" type="number" name="attr_CrushingStunValue1"
+                            value="Error"></span><span style="color: #5e9ca0;">% chance</span></b> to Stun for 1 round on the current attack [6% per S.L.]</p>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<div class="sheet-ranged">
+
+    <h1>Ranged Attack Bonus</h1>
+    <table>
+        <tr>
+            <th style="width: 50px; text-align: center;"></th>
+            <th style="width: 100px; text-align: center;"></th>
+            <th style="width: 50px; text-align: center;">Total</th>
+            <th style="width: 50px; text-align: center;">Base</th>
+            <th style="width: 50px; text-align: center;">Equip</th>
+            <th style="width: 50px; text-align: center;">Temp</th>
+            <th style="width: 50px; text-align: center;">Notes</th>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Critical Hit (%)</td>
+            <td><input type="number" name="attr_TotalRangedCriticalHit" value="0" readonly="true" /></td>
+            <td><input title="Ranged Critical Hit Skill Level * 3% + Ranged Combat Mastery Skill Level * 1%" type="number" name="attr_BaseRangedCriticalHit" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipRangedCriticalHit" value="0" /></td>
+            <td><input type="number" name="attr_TempRangedCriticalHit" value="0" /></td>
+            <td><input type="text" name="attr_RangedCriticalHitNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Extra Attack (%)</td>
+            <td><input type="number" name="attr_TotalRangedExtraAttack" value="0" readonly="true" /></td>
+            <td><input title="Ranged Extra Attack Skill Level * 3% + Ranged Combat Mastery * 1%" type="number" name="attr_BaseRangedExtraAttack" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipRangedExtraAttack" value="0" /></td>
+            <td><input type="number" name="attr_TempRangedExtraAttack" value="0" /></td>
+            <td><input type="text" name="attr_RangedExtraAttackNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Cripple (%)</td>
+            <td><input type="number" name="attr_TotalRangedCripple" value="0" readonly="true" /></td>
+            <td><input title="Ranged Cripple Skill Level * 3%" type="number" name="attr_BaseRangedCripple" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipRangedCripple" value="0" /></td>
+            <td><input type="number" name="attr_TempRangedCripple" value="0" /></td>
+            <td><input type="text" name="attr_RangedCrippleNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Stun (%)</td>
+            <td><input type="number" name="attr_TotalRangedStun" value="0" readonly="true" /></td>
+            <td><input title="Ranged Stun Skill Level * 3%" type="number" name="attr_BaseRangedStun" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipRangedStun" value="0" /></td>
+            <td><input type="number" name="attr_TempRangedStun" value="0" /></td>
+            <td><input type="text" name="attr_RangedStunNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Pierce (%)</td>
+            <td><input type="number" name="attr_TotalRangedPierce" value="0" readonly="true" /></td>
+            <td><input title="Ranged Pierce Skill Level * 5%" type="number" name="attr_BaseRangedPierce" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipRangedPierce" value="0" /></td>
+            <td><input type="number" name="attr_TempRangedPierce" value="0" /></td>
+            <td><input type="text" name="attr_RangedPierceNotes" style="width:400px" value="" /></td>
+        </tr>
+    </table>
+    <hr/>
+    <h1>Ranged Skills</h1>
+    <table>
+        <tr>
+            <th style="text-align: center;"></th>
+            <th style="text-align: center;">Cost</th>
+            <th style="width: 60px; text-align: center;">Current<br>Level</th>
+            <th style="width: 60px; text-align: center;">Max<br>Level</th>
+            <th style="text-align: center;">Effect</th>
+        </tr>
+        <tr>
+            <td><b><span style="white-space: nowrap;"> Ranged Armor Mastery</span></b></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedArmorMastery" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedArmorMastery_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Allows the player to use and craft ranged body armors and shields of up to <b><span
+                            style="color: #5e9ca0;">level </span><span style="color: #5e9ca0;" type="number"
+                            name="attr_RangedArmorMasteryValue1" value="Error" /></b> [10 per S.L.]
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Ranged Combat Mastery</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedCombatMastery" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedCombatMastery_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_RangedCombatMasteryValue1" value="Error"></span><span
+                            style="color: #5e9ca0;">% chance</span></b> to make a critical hit [1% per S.L.], and <b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_RangedCombatMasteryValue2" value="Error"></span><span
+                            style="color: #5e9ca0;">% chance</span></b> to attack a second time using ranged weapons [1% per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Critical Hit</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedCriticalHit" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedCriticalHit_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_RangedCriticalHitValue1" value="Error"></span><span style="color: #5e9ca0;">%
+                            chance</span></b> to make a critical hit when using ranged weapons [3% per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Cripple</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedCripple" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedCripple_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_RangedCrippleValue1" value="Error"></span><span style="color: #5e9ca0;">%
+                            chance</span></b> to cripple when using ranged weapons [3% per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Extra Attack</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedExtraAttack" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedExtraAttack_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_RangedExtraAttackValue1" value="Error"></span><span style="color: #5e9ca0;">%
+                            chance</span></b> to attack a second time when using ranged weapons [3% per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Pierce</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedPierce" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedPierce_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_RangedPierceValue1" value="Error"></span><span style="color: #5e9ca0;">%
+                            chance</span></b> to pierce the target's armor when using ranged weapons [5% per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Stun</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedStun" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_RangedStun_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_RangedStunValue1" value="Error"></span><span style="color: #5e9ca0;">%
+                            chance</span></b> to stun for 1 round when using ranged weapons [3% per S.L.]
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Bows Mastery</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_BowsMastery" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_BowsMastery_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Allows the player to use and craft bows (and similar weapons) of up to <b><span
+                            style="color: #5e9ca0;">level </span><span style="color: #5e9ca0;" type="number"
+                            name="attr_BowsMasteryValue1" value="Error" /></b> [10 per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Take Aim</span></td>
+            <td>(2 SP, on attack)</td>
+            <td style="text-align: center;"><input type="number" name="attr_TakeAim" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_TakeAim_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_TakeAimValue1" value="Error"></span></b> Ranged Offense Level on the current attack [0.5 S.L + 1]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Long Range</span></td>
+            <td>(3 SP, on attack)</td>
+            <td style="text-align: center;"><input type="number" name="attr_LongRange" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_LongRange_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_LongRangeValue1" value="Error"></span></b> range on the current attack [0.3 S.L + 1]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Pin Down</span></td>
+            <td>(2 SP, on attack)</td>
+            <td style="text-align: center;"><input type="number" name="attr_PinDown" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_PinDown_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Usable with bows, <b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;"
+                            type="number" name="attr_PinDownValue1" value="Error"></span><span
+                            style="color: #5e9ca0;">% chance</span></b> to Cripple on the current attack [7% per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Throwing Weapons Mastery</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_ThrowingWeaponsMastery" value="0" />
+            </td>
+            <td style="text-align: center;"><input type="number" name="attr_ThrowingWeaponsMastery_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>Allows the player to use and craft throwing weapons of up to <b><span
+                            style="color: #5e9ca0;">level </span><span style="color: #5e9ca0;" type="number"
+                            name="attr_ThrowingWeaponsMasteryValue1" value="Error" /></b> [10 per S.L.]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Precise Hit</span></td>
+            <td>(2 SP, on attack)</td>
+            <td style="text-align: center;"><input type="number" name="attr_PreciseHit" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_PreciseHit_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_PreciseHitValue1" value="Error"></span></b> Ranged Offense Level on the current attack [0.5 S.L + 1]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Flurry</span></td>
+            <td>(3 SP, on attack)</td>
+            <td style="text-align: center;"><input type="number" name="attr_Flurry" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_Flurry_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br>The player makes two attacks with an additional <b><span style="color: #5e9ca0;"
+                            type="number" name="attr_FlurryValue1" value="Error"></span></b> Ranged Offence Level; the first rounded up, the second rounded down [0.5 S.L -2]</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Aim for the Eyes!!</span></td>
+            <td>(Passive)</td>
+            <td style="text-align: center;"><input type="number" name="attr_AimForTheEyes" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_AimForTheEyes_max" value="10" readonly="true" /></td>
+            <td>
+                <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                            name="attr_AimForTheEyesValue1" value="Error"></span></b> damage on every attach with Throwing weapons [0.4 S.L + 1]</p>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<div class="sheet-magic">
+
+    <h1>Magic Attack Bonus</h1>
+    <table>
+        <tr>
+            <th style="width: 50px; text-align: center;"></th>
+            <th style="width: 100px; text-align: center;"></th>
+            <th style="width: 50px; text-align: center;">Total</th>
+            <th style="width: 50px; text-align: center;">Base</th>
+            <th style="width: 50px; text-align: center;">Equip</th>
+            <th style="width: 50px; text-align: center;">Temp</th>
+            <th style="width: 50px; text-align: center;">Notes</th>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Critical Hit (%)</td>
+            <td><input type="number" name="attr_TotalMagicCriticalHit" value="0" readonly="true" /></td>
+            <td><input type="hidden" name="attr_BaseMagicCriticalHit" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipMagicCriticalHit" value="0" /></td>
+            <td><input type="number" name="attr_TempMagicCriticalHit" value="0" /></td>
+            <td><input type="text" name="attr_CriticalHitNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Extra Attack (%)</td>
+            <td><input type="number" name="attr_TotalMagicExtraAttack" value="0" readonly="true" /></td>
+            <td><input type="hidden" name="attr_BaseMagicExtraAttack" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipMagicExtraAttack" value="0" /></td>
+            <td><input type="number" name="attr_TempMagicExtraAttack" value="0" /></td>
+            <td><input type="text" name="attr_ExtraAttackNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Cripple (%)</td>
+            <td><input type="number" name="attr_TotalMagicCripple" value="0" readonly="true" /></td>
+            <td><input type="hidden" name="attr_BaseMagicCripple" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipMagicCripple" value="0" /></td>
+            <td><input type="number" name="attr_TempMagicCripple" value="0" /></td>
+            <td><input type="text" name="attr_MagicCrippleNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Stun (%)</td>
+            <td><input type="number" name="attr_TotalMagicStun" value="0" readonly="true" /></td>
+            <td><input type="hidden" name="attr_BaseMagicStun" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipMagicStun" value="0" /></td>
+            <td><input type="number" name="attr_TempMagicStun" value="0" /></td>
+            <td><input type="text" name="attr_MagicStunNotes" style="width:400px" value="" /></td>
+        </tr>
+        <tr>
+            <td style="width: 50px; text-align: center;"></td>
+            <td>Pierce (%)</td>
+            <td><input type="number" name="attr_TotalMagicPierce" value="0" readonly="true" /></td>
+            <td><input type="hidden" name="attr_BaseMagicPierce" value="0" readonly="true" /></td>
+            <td><input type="number" name="attr_EquipMagicPierce" value="0" /></td>
+            <td><input type="number" name="attr_TempMagicPierce" value="0" /></td>
+            <td><input type="text" name="attr_MagicPierceNotes" style="width:400px" value="" /></td>
+        </tr>
+    </table>
+    <hr />
+    <h1>Magic Skills</h1>
+    <table>
+        <tr>
+            <th style="text-align: center;"></th>
+            <th style="width: 75px; text-align: center;">Current<br>Level</th>
+            <th style="width: 75px; text-align: center;">Max<br>Level</th>
+            <th style="text-align: center;">Effect</th>
+        </tr>
+        <tr>
+            <td><b><span style="white-space: nowrap;"> Magic Armor Mastery</span></b></td>
+            <td style="text-align: center;"><input type="number" name="attr_MagicArmorMastery" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_MagicArmorMastery_max" value="10" readonly="true" /></td>
+            <td>Allows the player to use and craft magic body armors and shields of up to <b><span
+                        style="color: #5e9ca0;">level </span><span style="color: #5e9ca0;" type="number"
+                        name="attr_MagicArmorMasteryValue1" value="Error" /></b> [10 per S.L.]</td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Magic Adept</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_MagicAdept" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_MagicAdept_max" value="10" readonly="true" /></td>
+            <td><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                        name="attr_MagicAdeptValue1" value="Error" /></b> on all concentration rolls [+2 per S.L.]
+            </td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Magic Weapon Mastery</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_MagicWeaponMastery" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_MagicWeaponMastery_max" value="10" readonly="true" /></td>
+            <td>Allows the player to use and craft magic weapons of up to <b><span style="color: #5e9ca0;">level
+                    </span><span style="color: #5e9ca0;" type="number" name="attr_MagicWeaponMasteryValue1"
+                        value="Error" /></b> [10 per S.L.]</td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Black Magic Mastery</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_BlackMagicMastery" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_BlackMagicMastery_max" value="10" readonly="true" /></td>
+            <td>Allows the player to use and craft Black Magic Spells up to <b><span style="color: #5e9ca0;">tier
+                    </span><span style="color: #5e9ca0;" type="number" name="attr_BlackMagicMasteryValue1"
+                        value="Error" /></b> [1 per S.L.]</td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Demonic Expert</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_DemonicExpert" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_DemonicExpert_max" value="10" readonly="true" /></td>
+            <td><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                        name="attr_DemonicExpertValue1" value="Error" /></b> to Spell Force when casting Demonic Spells [+1 per S.L.]</td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Forces Expert</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_ForcesExpert" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_ForcesExpert_max" value="10" readonly="true" /></td>
+            <td><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                        name="attr_ForcesExpertValue1" value="Error" /></b> to Spell Force when casting Forces Spells [+1 per S.L.]</td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Necromancy Expert</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_NecromancyExpert" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_NecromancyExpert_max" value="10" readonly="true" /></td>
+            <td><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                        name="attr_NecromancyExpertValue1" value="Error" /></b> to Spell Force when casting Necromancy Spells [+1 per S.L.]</td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Grey Magic Mastery</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_GreyMagicMastery" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_GreyMagicMastery_max" value="10" readonly="true" /></td>
+            <td>Allows the player to use and craft Grey Magic Spells up to <b><span style="color: #5e9ca0;">tier
+                    </span><span style="color: #5e9ca0;" type="number" name="attr_GreyMagicMasteryValue1"
+                        value="Error" /></b> [1 per S.L.]</td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Dimension Expert</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_DimensionExpert" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_DimensionExpert_max" value="10" readonly="true" /></td>
+            <td><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                        name="attr_DimensionExpertValue1" value="Error" /></b> to Spell Force when casting Dimension Spells [+1 per S.L.]</td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Mind Expert</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_MindExpert" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_MindExpert_max" value="10" readonly="true" /></td>
+            <td><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                        name="attr_MindExpertValue1" value="Error" /></b> to Spell Force when casting Mind Spells [+1 per S.L.]</td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Nature Expert</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_NatureExpert" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_NatureExpert_max" value="10" readonly="true" /></td>
+            <td><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                        name="attr_NatureExpertValue1" value="Error" /></b> to Spell Force when casting Nature Spells [+1 per S.L.]</td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> White Magic Mastery</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_WhiteMagicMastery" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_WhiteMagicMastery_max" value="10" readonly="true" /></td>
+            <td>Allows the player to use and craft White Magic Spells up to <b><span style="color: #5e9ca0;">tier
+                    </span><span style="color: #5e9ca0;" type="number" name="attr_WhiteMagicMasteryValue1"
+                        value="Error" /></b> [1 per S.L.]</td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Creation Expert</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_CreationExpert" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_CreationExpert_max" value="10" readonly="true" /></td>
+            <td><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                        name="attr_CreationExpertValue1" value="Error" /></b> to Spell Force when casting Creation Spells [+1 per S.L.]</td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Divine Expert</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_DivineExpert" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_DivineExpert_max" value="10" readonly="true" /></td>
+            <td><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                        name="attr_DivineExpertValue1" value="Error" /></b> to Spell Force when casting Divine Spells [+1 per S.L.]</td>
+        </tr>
+        <tr>
+            <td><span style="white-space: nowrap;"> Life Expert</span></td>
+            <td style="text-align: center;"><input type="number" name="attr_LifeExpert" value="0" /></td>
+            <td style="text-align: center;"><input type="number" name="attr_LifeExpert_max" value="10" readonly="true" /></td>
+            <td><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                        name="attr_LifeExpertValue1" value="Error" /></b> to Spell Force when casting Life Spells [+1 per S.L.]</td>
+        </tr>
+    </table>
+
+</div>
+

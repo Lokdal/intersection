@@ -3,7 +3,7 @@
 
         <div class="summary_table">
             <div class="col_table">
-                <h1><div>{{actor.name}}</div></h1>
+                <h1 style="text-align: center;"><div>{{actor.name}}</div></h1>
                 <div class="cell_data">Anti-Mage (level 27)</div>
                 <div class="cell_data">Omnipotent Sociopath</div>
                 <div class="cell_data">514-967-6812</div>
@@ -11,182 +11,36 @@
         </div>
 
         <div class="tombstone">
-            <img src="systems/intersection/templates/sheets/images/Vincent.jpg" alt="Tsé" width="120" height="120">
+            <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}"  width="120" height="120"/>
         </div>
 
         <div class="points_table">
-            <div class="col_table">
-                <div class="cell_header">Points</div>
-                <div class="cell_data">Life</div>
-                <div class="cell_data">Stamina</div>
-                <div class="cell_data">Mana</div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Current</div>
-                <div class="cell_data">{{data.life_points.value}}</div>
-                <div class="cell_data">{{data.stamina_points.value}}</div>
-                <div class="cell_data">{{data.mana_points.value}}</div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Max</div>
-                <div class="cell_data">{{data.life_points.max}}</div>
-                <div class="cell_data">{{data.stamina_points.max}}</div>
-                <div class="cell_data">{{data.mana_points.max}}</div>
-            </div>
-        </div>        
+            {{> "systems/intersection/templates/partials/actor_points_table.hbs"}}
+        </div>     
 
         <div class="stats_table">
-            <div class="col_table">
-                <div class="cell_header">Fighting Style</div>
-                <div class="cell_data"> </div>
-                <div class="cell_data">Melee</div>
-                <div class="cell_data">Ranged</div>
-                <div class="cell_data">Magic</div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Offense</div>
-                <div class="cell_data"> </div>
-                <div class="cell_data">{{data.melee_off.total}}</div>
-                <div class="cell_data">{{data.ranged_off.total}}</div>
-                <div class="cell_data">{{data.magic_off.total}}</div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Defense</div>
-                <div class="cell_data"> </div>
-                <div class="cell_data">{{data.melee_def.total}}</div>
-                <div class="cell_data">{{data.ranged_def.total}}</div>
-                <div class="cell_data">{{data.magic_def.total}}</div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Crit. Hit</div>
-                <div class="cell_data"> </div>
-                <div class="cell_data">{{data.melee_crit.total}}</div>
-                <div class="cell_data">{{data.ranged_crit.total}}</div>
-                <div class="cell_data">{{data.magic_crit.total}}</div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Extra Att.</div>
-                <div class="cell_data"> </div>
-                <div class="cell_data">{{data.melee_extraAtt.total}}</div>
-                <div class="cell_data">{{data.ranged_extraAtt.total}}</div>
-                <div class="cell_data">{{data.magic_extraAtt.total}}</div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Cripple</div>
-                <div class="cell_data"> </div>
-                <div class="cell_data">{{data.melee_cripple.total}}</div>
-                <div class="cell_data">{{data.ranged_cripple.total}}</div>
-                <div class="cell_data">{{data.magic_cripple.total}}</div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Stun</div>
-                <div class="cell_data"> </div>
-                <div class="cell_data">{{data.melee_stun.total}}</div>
-                <div class="cell_data">{{data.ranged_stun.total}}</div>
-                <div class="cell_data">{{data.magic_stun.total}}</div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Pierce</div>
-                <div class="cell_data"> </div>
-                <div class="cell_data">{{data.melee_pierce.total}}</div>
-                <div class="cell_data">{{data.ranged_pierce.total}}</div>
-                <div class="cell_data">{{data.magic_pierce.total}}</div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Dodge</div>
-                <div class="cell_data"> </div>
-                <div class="cell_data">{{data.melee_dodge.total}}</div>
-                <div class="cell_data">{{data.ranged_dodge.total}}</div>
-                <div class="cell_data">{{data.magic_dodge.total}}</div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Soak</div>
-                <div class="cell_data"> </div>
-                <div class="cell_data">{{data.melee_soak.total}}</div>
-                <div class="cell_data">{{data.ranged_soak.total}}</div>
-                <div class="cell_data">{{data.magic_soak.total}}</div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Exp</div>
-                <div class="cell_data"> </div>
-                <div><input class="cell_data" type="text" data-dtype="Number" name="data.melee_exp"  value="{{data.melee_exp}}"/></div>
-                <div><input class="cell_data" type="text" data-dtype="Number" name="data.ranged_exp" value="{{data.ranged_exp}}"/></div>
-                <div><input class="cell_data" type="text" data-dtype="Number" name="data.magic_exp"  value="{{data.magic_exp}}"/></div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Level</div>
-                <div class="cell_data"> </div>
-                <div class="cell_data">{{data.melee_level}}</div>
-                <div class="cell_data">{{data.ranged_level}}</div>
-                <div class="cell_data">{{data.magic_level}}</div>
-            </div>
-            <div class="col_table">
-                <div class="cell_header">Tier</div>
-                <div class="cell_data"> </div>                
-                <div class="cell_data">{{data.melee_tier}}</div>
-                <div class="cell_data">{{data.ranged_tier}}</div>
-                <div class="cell_data">{{data.magic_tier}}</div>
-            </div>
+            {{> "systems/intersection/templates/partials/actor_stats_table.hbs"}}
         </div>
 
         <div class="equipment_table">
-            <div class="equipment_slot">
-                <img src="systems/intersection/templates/sheets/images/cape.png" alt="Cape" width="60" height="60">
-            </div>
-            <div class="equipment_slot">
-                <img src="systems/intersection/templates/sheets/images/helm.png" alt="Helm" width="60" height="60">
-            </div>
-            <div> </div>
-            <section class="equipment_slot">
-                {{#each mainHand as |hand id|}}
-                {{> "systems/intersection/templates/partials/weapon_card.hbs" hand}}
-                {{/each}}
-                <img src="systems/intersection/templates/sheets/images/hand1.png" alt="Weapon" width="60" height="60">
-            </section>
-            <div class="equipment_slot">
-                <img src="systems/intersection/templates/sheets/images/armor.png" alt="Armor" width="60" height="60">
-            </div>
-            <div class="equipment_slot">
-                <img src="systems/intersection/templates/sheets/images/hand2.png" alt="Weapon/Shield" width="60" height="60">
-            </div>
-            <div> </div>
-            <div class="equipment_slot">
-                <img src="systems/intersection/templates/sheets/images/boots.png" alt="Boots" width="60" height="60">
-            </div>
-            <div class="equipment_slot">
-                <img src="systems/intersection/templates/sheets/images/gloves.png" alt="Gloves" width="60" height="60">
-            </div>
-            
-            <div> </div>
-            <div> </div>
-            <div> </div>
-            
-            <div class="equipment_slot">
-                <img src="systems/intersection/templates/sheets/images/charm.png" alt="Charm 1" width="60" height="60">    
-            </div>
-            <div class="equipment_slot">
-                <img src="systems/intersection/templates/sheets/images/amulet.png" alt="Amulet" width="60" height="60">
-            </div>
-            <div class="equipment_slot">
-                <img src="systems/intersection/templates/sheets/images/charm.png" alt="Charm 2" width="60" height="60">
-            </div>
-            <div class="equipment_slot">
-                <img src="systems/intersection/templates/sheets/images/ring.png" alt="Ring 1" width="60" height="60">
-            </div>
-            <div> </div>
-            <div class="equipment_slot">
-                <img src="systems/intersection/templates/sheets/images/ring.png" alt="Ring 2" width="60" height="60">
-            </div>
-            <div class="equipment_slot">
-                <img src="systems/intersection/templates/sheets/images/ring.png" alt="Ring 3" width="60" height="60">
-            </div>
-            <div> </div>
-            <div class="equipment_slot">
-                <img src="systems/intersection/templates/sheets/images/ring.png" alt="Ring 4" width="60" height="60">
-            </div>
-            
+            {{> "systems/intersection/templates/partials/actor_equip_table.hbs"}}
         </div>
 
+        <div class="skills_table">
+            <div class="cell_header">Skill</div>
+            <div class="cell_header">Tier</div>
+            <div class="cell_header">Cost</div>
+            <div class="cell_header">Description</div>
+            <div class="cell_header">Used?</div>
+            
+            {{#each skills as |skill id|}}
+            <div class="cell_data item skill" data-itemID="{{skill._id}}" data-field="name">{{skill.name}}</div>
+            <div class="cell_data item skill" data-itemID="{{skill._id}}" data-field="data.tier">{{skill.data.tier}}</div>
+            <div class="cell_data item skill" data-itemID="{{skill._id}}" data-field="data.cost_SP">{{skill.data.cost_SP}}</div>
+            <div class="cell_data item skill" data-itemID="{{skill._id}}" data-field="data.description">{{skill.data.cost_SP}}</div>
+            <div class="cell_data item skill" data-itemID="{{skill._id}}" data-field="data.used">X</div>
+            {{/each}}
+        </div>
     </div>
     <div>{{editor content=data.description target="data.description" button=true owner=owner editable=editable}}</div>
 </form>

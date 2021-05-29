@@ -1,0 +1,39 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </header>
+    <div class="sheet-content">
+        <table>
+            <tr>
+                <th>Item Subtype</th>
+                <th>Fighting Style</th>
+                <th>Tier</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="data.itemSubtype">
+                    {{#select data.itemSubtype}}
+                    {{#each config.itemSubtype as |name key|}}
+                    <option value="{{key}}">{{name}}</option>
+                    {{/each}}
+                    {{/select}}
+                    </select>
+                </td>
+                <td>
+                    <select name="data.fightingStyle">
+                    {{#select data.fightingStyle}}
+                    {{#each config.fightingStyle as |name key|}}
+                    <option value="{{key}}">{{name}}</option>
+                    {{/each}}
+                    {{/select}}
+                    </select>
+                </td>
+                <td><input name="data.exp" type="text" value="{{data.tier}}" data-dtype="Number"/></td>
+                <td>{{editor content=data.description target="data.description" button=true owner=owner editable=editable}}</td>
+            </tr>
+        </table>
+        
+    </div>
+</form>
