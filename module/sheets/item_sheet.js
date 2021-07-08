@@ -68,11 +68,10 @@ export default class item_sheet extends ItemSheet {
             label: "lol",
             changes: [{"key": "data.melee_off.equip", "mode": 1, "value":5}],
             duration: {},
-            transfer: true,
+            transfer: false,
         };
 
-        const effect = ActiveEffect.create(createData, this.item);
-        return effect.create({});
+        return ActiveEffect.create(createData, this.item);
     }
         
 };

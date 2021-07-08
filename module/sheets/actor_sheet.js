@@ -9,25 +9,6 @@ export default class actor_sheet extends ActorSheet {
         });
     };
 
-    itemContextMenu = [
-        {
-            name: "Edit",
-            icon: '<i class="fas fa-edit"></i>',
-            callback: element => {
-                const item = this.actor.getOwnedItem(element.data("item-id"));
-                item.sheet.render(true);
-            }
-        },
-        {
-            name: "Delete",
-            icon: '<i class="fas fa-trash"></i>',
-            callback: element => {
-                const item = this.actor.delete(element.data("item-id"))
-            }
-        }
-    ];
-
-    
     getData() {
         const data = super.getData();
         data.config = CONFIG.intersection;
@@ -55,9 +36,16 @@ export default class actor_sheet extends ActorSheet {
     };
 
     activateListeners(html) {
-        new ContextMenu(html, ".weapon-card", this.itemContextMenu);
-        new ContextMenu(html, ".armor-card", this.itemContextMenu);
+        html.find(".item-edit").click(this._onItemEdit.bind(this));
         super.activateListeners(html);
+    };
+
+    _onItemEdit(event) {
+        event.preventDefault();
+        let element = event.currentTarget;
+        let itemID = element.closest(".item").dataset.id;
+        let item = this.actor.items.get(itemID);
+        item.sheet.render(true)
     }
 
 
