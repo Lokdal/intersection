@@ -4,8 +4,8 @@
     "description": "Many details here.",
     "author": "Vincent LeBlanc",
     "version": "0.1.0",
-    "minimumCoreVersion": "0.7.9",
-    "compatibleCoreVersion": "0.7.9",
+    "minimumCoreVersion": "0.8.8",
+    "compatibleCoreVersion": "0.8.8",
     "templateVersion": 2,
     "scripts": [],
     "esmodules": ["intersection.js"],
@@ -35,7 +35,7 @@
     "gridUnits": "m",
     "primaryTokenAttribute": null,
     "secondaryTokenAttribute": null,
-    "url": "",
+    "url": "https://github.com/Lokdal/intersection",
     "manifest": "https://github.com/Lokdal/intersection/blob/master/system.json",
     "download": "https://github.com/Lokdal/intersection/archive/master.zip"
 }
