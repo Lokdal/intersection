@@ -1,0 +1,22 @@
+<section class="skills_table">
+    <h2>
+        <div>Skills</div>
+        <a class="item-create" data-type="skill" title="Add Skill">
+            <i class="fas fa-plus"></i>
+        </a>
+    </h2>
+    <div class="cell_header">Skill</div>
+    <div class="cell_header">Tier</div>
+    <div class="cell_header">Cost</div>
+    <div class="cell_header">Description</div>
+    <div class="cell_header">Used?</div>
+    {{#each skills as |skill id|}}
+    <div class="cell_data skill" data-itemID="{{skill._id}}">
+        <input class="skill-name inline-edit" data-field="name" type="text" value="{{skill.name}}">
+        <input class="skill-tier inline-edit" data-field="data.tier" type="text" value="{{skill.data.tier}}" data-dtype="Number">
+        <input class="skill-cost_SP inline-edit" data-field="data.cost_SP" type="text" value="{{skill.data.cost_SP}}" data-dtype="Number">
+        <input class="skill-description inline-edit" data-field="data.description" type="text" value="{{skill.description}}">
+        <input class="skill-used inline-edit" data-field="data.used" type="text" value="">
+    </div>
+    {{/each}}
+            

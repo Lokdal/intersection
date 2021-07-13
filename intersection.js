@@ -7,6 +7,7 @@ async function preloadHandlebarsTemplates() {
         "systems/intersection/templates/partials/actor_points_table.hbs",
         "systems/intersection/templates/partials/actor_stats_table.hbs",
         "systems/intersection/templates/partials/actor_equip_table.hbs",
+        "systems/intersection/templates/partials/actor_skills_table.hbs",
         "systems/intersection/templates/partials/weapon_card.hbs",
         "systems/intersection/templates/partials/armor_card.hbs",
         "systems/intersection/templates/partials/accessory_card.hbs",
