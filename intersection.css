@@ -34,7 +34,7 @@
   grid-row-end: 2;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(4, 1em);
+  grid-template-rows: repeat(4, auto);
 }
 .intersection.sheet.actor .sheet-content .tombstone {
   grid-column-start: 18;

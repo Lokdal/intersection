@@ -1,18 +1,18 @@
 <div class="col_table">
     <div class="cell_header">Points</div>
-    <div class="cell_header">Life</div>
-    <div class="cell_header">Stamina</div>
-    <div class="cell_header">Mana</div>
+    <div class="cell_data">Life</div>
+    <div class="cell_data">Stamina</div>
+    <div class="cell_data">Mana</div>
 </div>
 <div class="col_table">
     <div class="cell_header">Current</div>
-    <input class="cell_data" "inline-edit" type="text" data-dtype="Number" data-field="life_points.value" value="{{life_points.value}}"/>
-    <div class="cell_data">{{data.stamina_points.value}}</div>
-    <div class="cell_data">{{data.mana_points.value}}</div>
+    <input class="cell_data" type="text" data-dtype="Number" name="data.life_points.value" value="{{data.data.life_points.value}}"/>
+    <input class="cell_data" type="text" data-dtype="Number" name="data.stamina_points.value" value="{{data.data.stamina_points.value}}"/>
+    <input class="cell_data" type="text" data-dtype="Number" name="data.mana_points.value" value="{{data.data.mana_points.value}}"/>
 </div>
 <div class="col_table">
     <div class="cell_header">Max</div>
-    <div class="cell_data">{{data.life_points.max}}</div>
-    <div class="cell_data">{{data.stamina_points.max}}</div>
-    <div class="cell_data">{{data.mana_points.max}}</div>
+    <input class="cell_data" type="text" data-dtype="Number" name="data.life_points.max" value="{{data.data.life_points.max}}"/>
+    <input class="cell_data" type="text" data-dtype="Number" name="data.stamina_points.max" value="{{data.data.stamina_points.max}}"/>
+    <input class="cell_data" type="text" data-dtype="Number" name="data.mana_points.max" value="{{data.data.mana_points.max}}"/>
 </div>

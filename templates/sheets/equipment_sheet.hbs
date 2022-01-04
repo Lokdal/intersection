@@ -7,27 +7,23 @@
 
         <ol class="effects-list">
             <li class="effect flexrow effect-header">
-                <div class="effect-name">Name</div>
+                <div class="effect-name">List of Effects</div>
                 <div class="effect-controls">
-                    <a class="effect-control" data-action="create" title="Add Effect">
-                        <i class="fas fa-plus"></i>Add Effect</a>
+                    <a class="effect-control" data-action="create" title="Add Effect"><i class="fas fa-plus"></i>Add Effect</a>
                 </div>
             </li>
             {{#each item.effects as |effect id|}}
             <li class="effect flexrow" data-effect-id="{{effect.id}}">
-                <h4 class="effect-name">{{effect.label}}</h4>
-                <div class="effect-controls">
-                    <a class="effect-control" data-action="edit" title="Edit Effect">
-                        <i class="fas fa-edit"></i></a>
-                    <a class="effect-control" data-action="delete" title="Delete Effect">
-                        <i class="fas fa-trash"></i></a>
-                </div>
+                <h4 class="effect-name">{{effect.data.label}}</h4>
+                {{#each effect.data.changes as |change|}}
+                <li class="changes">
+                    <div class="cell_data">{{change.key}} {{change.value}}</div>
+                </li>
+                {{/each}}
             </li>
             {{/each}}
+            
         </ol>
 
-        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-        
-        
     </div>
 </form>

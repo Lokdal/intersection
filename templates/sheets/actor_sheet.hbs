@@ -34,11 +34,11 @@
             <div class="cell_header">Used?</div>
             
             {{#each skills as |skill id|}}
-            <div class="cell_data item skill" data-itemID="{{skill._id}}" data-field="name">{{skill.name}}</div>
-            <div class="cell_data item skill" data-itemID="{{skill._id}}" data-field="data.tier">{{skill.data.tier}}</div>
-            <div class="cell_data item skill" data-itemID="{{skill._id}}" data-field="data.cost_SP">{{skill.data.cost_SP}}</div>
-            <div class="cell_data item skill" data-itemID="{{skill._id}}" data-field="data.description">{{skill.data.cost_SP}}</div>
-            <div class="cell_data item skill" data-itemID="{{skill._id}}" data-field="data.used">X</div>
+            <div class="cell_data item skill" data-itemID="{{skill.id}}" data-field="name">{{skill.name}}</div>
+            <div class="cell_data item skill" data-itemID="{{skill.id}}" data-field="data.tier">{{skill.data.tier}}</div>
+            <div class="cell_data item skill" data-itemID="{{skill.id}}" data-field="data.cost_SP">{{skill.data.cost_SP}}</div>
+            <div class="cell_data item skill" data-itemID="{{skill.id}}" data-field="data.description">{{skill.data.cost_SP}}</div>
+            <div class="cell_data item skill" data-itemID="{{skill.id}}" data-field="data.used">X</div>
             {{/each}}
         </div>
     </div>

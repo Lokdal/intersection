@@ -57,54 +57,63 @@
             },
             "stats": {
                 "melee_off": {
+                    "label": "Melee Offense",
                     "base": 1,
                     "equip": 0,
                     "temp": 0,
                     "total": 0
                 },
                 "melee_def": {
+                    "label": "Melee Defense",
                     "base": 1,
                     "equip": 0,
                     "temp": 0,
                     "total": 0
                 },
                 "melee_crit": {
+                    "label": "Melee Critical Hit %",
                     "base": 0,
                     "equip": 0,
                     "temp": 0,
                     "total": 0
                 },
                 "melee_extraAtt": {
+                    "label": "Melee Extra Attack %",
                     "base": 0,
                     "equip": 0,
                     "temp": 0,
                     "total": 0
                 },
                 "melee_cripple": {
+                    "label": "Melee Cripple %",
                     "base": 0,
                     "equip": 0,
                     "temp": 0,
                     "total": 0
                 },
                 "melee_stun": {
+                    "label": "Melee Stun %",
                     "base": 0,
                     "equip": 0,
                     "temp": 0,
                     "total": 0
                 },
                 "melee_pierce": {
+                    "label": "Melee Pierce %",
                     "base": 0,
                     "equip": 0,
                     "temp": 0,
                     "total": 0
                 },
                 "melee_dodge": {
+                    "label": "Melee Dodge %",
                     "base": 0,
                     "equip": 0,
                     "temp": 0,
                     "total": 0
                 },
                 "melee_soak": {
+                    "label": "Melee Soak Damage",
                     "base": 0,
                     "equip": 0,
                     "temp": 0,

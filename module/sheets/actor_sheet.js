@@ -9,6 +9,23 @@ export default class actor_sheet extends ActorSheet {
         });
     };
 
+    itemContextMenu = [
+        {
+            name: "edit",
+            callback: element => {
+                const item = this.actor.items.get(element.data("item-id"));
+                item.sheet.render(true);
+            }
+        },
+        {
+            name: "delete",
+            callback: element => {
+                const item = this.actor.items.get(element.data("item-id"));
+                this.actor.deleteEmbeddedDocuments("Item",[item.id]);
+            }
+        }
+    ];
+
     getData() {
         const data = super.getData();
         data.config = CONFIG.intersection;
@@ -37,13 +54,15 @@ export default class actor_sheet extends ActorSheet {
 
     activateListeners(html) {
         html.find(".item-edit").click(this._onItemEdit.bind(this));
+
+        new ContextMenu(html, ".item", this.itemContextMenu);
         super.activateListeners(html);
     };
 
     _onItemEdit(event) {
         event.preventDefault();
         let element = event.currentTarget;
-        let itemID = element.closest(".item").dataset.id;
+        let itemID = element.closest(".item").dataset.itemId;
         let item = this.actor.items.get(itemID);
         item.sheet.render(true)
     }
