@@ -52,19 +52,55 @@ export default class actor_sheet extends ActorSheet {
         return data
     };
 
+    itemContextMenu = [
+        {
+            name: "Edit",
+            icon: '<i class="fas fa-edit"></i>',
+            callback: element => {
+                const itemID = element[0].dataset.id;
+                const item = this.actor.items.get(itemID);
+                item.sheet.render(true);
+            }
+        },
+        {
+            name: "Delete",
+            icon: '<i class="fas fa-trash"></i>',
+            callback: element => {
+                const itemID = element[0].dataset.id;
+                const item = this.actor.items.get(itemID);
+                item.delete();
+            }
+        }
+    ];
+
     activateListeners(html) {
+<<<<<<< HEAD
         html.find(".item-edit").click(this._onItemEdit.bind(this));
 
         new ContextMenu(html, ".item", this.itemContextMenu);
+=======
+        html.find(".item-edit").click(this._onItemClick.bind(this));
+        html.find(".inline-edit").change(this._onItemEdit.bind(this))
+        new ContextMenu(html, ".item-card", this.itemContextMenu);
+>>>>>>> acded102f5cd7c3e757c7e74ea293d001cd26b71
         super.activateListeners(html);
     };
 
-    _onItemEdit(event) {
+    _onItemClick(event) {
         event.preventDefault();
         let element = event.currentTarget;
         let itemID = element.closest(".item").dataset.itemId;
         let item = this.actor.items.get(itemID);
         item.sheet.render(true)
+    }
+
+    _onItemEdit(event) {
+        event.preventDefault();
+        let element = event.currentTarget;
+        let itemID = element.closest(".item").dataset.id;
+        let item = this.actor.items.get(itemID);
+        let field = element.dataset.field;
+        return item.update({ [field]: element.value});
     }
 
 
