@@ -13,15 +13,6 @@
                 </div>
             </li>
             {{#each item.effects as |effect id|}}
-<<<<<<< HEAD
-            <li class="effect flexrow" data-effect-id="{{effect.id}}">
-                <h4 class="effect-name">{{effect.data.label}}</h4>
-                {{#each effect.data.changes as |change|}}
-                <li class="changes">
-                    <div class="cell_data">{{change.key}} {{change.value}}</div>
-                </li>
-                {{/each}}
-=======
             <li class="effect flexrow" data-effect-id="{{effect._id}}">
                 <h4 class="effect-name">{{effect.label}}</h4>
                 <div class="effect-controls">
@@ -30,7 +21,6 @@
                     <a class="effect-control" data-action="delete" title="Delete Effect">
                         <i class="fas fa-trash"></i></a>
                 </div>
->>>>>>> acded102f5cd7c3e757c7e74ea293d001cd26b71
             </li>
             {{/each}}
             

@@ -4,15 +4,9 @@
     "description": "Many details here.",
     "author": "Vincent LeBlanc",
     "version": "0.1.0",
-<<<<<<< HEAD
     "minimumCoreVersion": "0.7.9",
-    "compatibleCoreVersion": "0.8.9",
-    "templateVersion": 3,
-=======
-    "minimumCoreVersion": "0.8.8",
-    "compatibleCoreVersion": "0.8.8",
-    "templateVersion": 2,
->>>>>>> acded102f5cd7c3e757c7e74ea293d001cd26b71
+    "compatibleCoreVersion": "0.9",
+    "templateVersion": 4,
     "scripts": [],
     "esmodules": ["intersection.js"],
     "styles": ["intersection.css"],

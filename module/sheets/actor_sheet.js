@@ -9,23 +9,6 @@ export default class actor_sheet extends ActorSheet {
         });
     };
 
-    itemContextMenu = [
-        {
-            name: "edit",
-            callback: element => {
-                const item = this.actor.items.get(element.data("item-id"));
-                item.sheet.render(true);
-            }
-        },
-        {
-            name: "delete",
-            callback: element => {
-                const item = this.actor.items.get(element.data("item-id"));
-                this.actor.deleteEmbeddedDocuments("Item",[item.id]);
-            }
-        }
-    ];
-
     getData() {
         const data = super.getData();
         data.config = CONFIG.intersection;
@@ -57,8 +40,7 @@ export default class actor_sheet extends ActorSheet {
             name: "Edit",
             icon: '<i class="fas fa-edit"></i>',
             callback: element => {
-                const itemID = element[0].dataset.id;
-                const item = this.actor.items.get(itemID);
+                const item = this.actor.items.get(element.data("item-id"));
                 item.sheet.render(true);
             }
         },
@@ -66,23 +48,16 @@ export default class actor_sheet extends ActorSheet {
             name: "Delete",
             icon: '<i class="fas fa-trash"></i>',
             callback: element => {
-                const itemID = element[0].dataset.id;
-                const item = this.actor.items.get(itemID);
-                item.delete();
+                const item = this.actor.items.get(element.data("item-id"));
+                this.actor.deleteEmbeddedDocuments("Item",[item.id]);
             }
         }
     ];
 
     activateListeners(html) {
-<<<<<<< HEAD
         html.find(".item-edit").click(this._onItemEdit.bind(this));
 
         new ContextMenu(html, ".item", this.itemContextMenu);
-=======
-        html.find(".item-edit").click(this._onItemClick.bind(this));
-        html.find(".inline-edit").change(this._onItemEdit.bind(this))
-        new ContextMenu(html, ".item-card", this.itemContextMenu);
->>>>>>> acded102f5cd7c3e757c7e74ea293d001cd26b71
         super.activateListeners(html);
     };
 
