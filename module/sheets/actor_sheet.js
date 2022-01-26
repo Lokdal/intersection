@@ -40,7 +40,8 @@ export default class actor_sheet extends ActorSheet {
             name: "Edit",
             icon: '<i class="fas fa-edit"></i>',
             callback: element => {
-                const item = this.actor.items.get(element.data("item-id"));
+                const itemID = element.data("id");
+                const item = this.actor.items.get(itemID);
                 item.sheet.render(true);
             }
         },
@@ -48,14 +49,14 @@ export default class actor_sheet extends ActorSheet {
             name: "Delete",
             icon: '<i class="fas fa-trash"></i>',
             callback: element => {
-                const item = this.actor.items.get(element.data("item-id"));
-                this.actor.deleteEmbeddedDocuments("Item",[item.id]);
+                const itemID = element.data("id");
+                this.actor.deleteEmbeddedDocuments("Item",[itemID]);
             }
         }
     ];
 
     activateListeners(html) {
-        html.find(".item-edit").click(this._onItemEdit.bind(this));
+        html.find(".item-edit").click(this._onItemClick.bind(this));
 
         new ContextMenu(html, ".item", this.itemContextMenu);
         super.activateListeners(html);
@@ -63,19 +64,10 @@ export default class actor_sheet extends ActorSheet {
 
     _onItemClick(event) {
         event.preventDefault();
-        let element = event.currentTarget;
-        let itemID = element.closest(".item").dataset.itemId;
-        let item = this.actor.items.get(itemID);
-        item.sheet.render(true)
-    }
-
-    _onItemEdit(event) {
-        event.preventDefault();
-        let element = event.currentTarget;
-        let itemID = element.closest(".item").dataset.id;
-        let item = this.actor.items.get(itemID);
-        let field = element.dataset.field;
-        return item.update({ [field]: element.value});
+        let element = event.currentTarget.closest(".item-edit")
+        let itemID = element.dataset.id;
+        const item = this.actor.items.get(itemID);
+        item.sheet.render(true);
     }
 
 

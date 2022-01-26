@@ -1,9 +1,5 @@
-<div class="weapon-card item-card item">
-    <div class="weapon-stats">
-        <img src={{img}} alt="WILL HAVE STATS HERE" width="60" height="60">
-        <p></p>
-        {{#if (compare data.fightingStyle "==" "melee")}}Mel.Off.: {{data.melee_off}}{{/if}}
-        {{#if (compare data.fightingStyle "==" "ranged")}}Rng.Off.: {{data.ranged_off}}{{/if}}
-        {{#if (compare data.fightingStyle "==" "magic")}}Mag.Off.: {{data.magic_off}}{{/if}}
+<div class="weapon-card item-card">
+    <div class="item-edit item" data-id="{{_id}}">
+        <img src={{img}} title="{{data.fightingStyle}} weapon (Tier {{data.tier}})" width="60" height="60">        
     </div>
 </div> 
