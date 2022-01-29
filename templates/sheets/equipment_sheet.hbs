@@ -7,14 +7,14 @@
 
         <ol class="effects-list">
             <li class="effect flexrow effect-header">
-                <div class="effect-name">List of Effects</div>
-                <div class="effect-controls">
+                <h3 class="effect-name">List of Effects</h2>
+                <h3 class="effect-controls">
                     <a class="effect-control" data-action="create" title="Add Effect"><i class="fas fa-plus"></i>Add Effect</a>
-                </div>
+                </h3>
             </li>
-            {{#each item.effects as |effect id|}}
-            <li class="effect flexrow" data-effect-id="{{effect._id}}">
-                <h4 class="effect-name">{{effect.label}}</h4>
+            {{#each item.effects as |effect|}}
+            <li class="effect flexrow" data-effect-id="{{effect.data._id}}">
+                <h4 class="effect-name">{{effect.data.label}}</h4>
                 <div class="effect-controls">
                     <a class="effect-control" data-action="edit" title="Edit Effect">
                         <i class="fas fa-edit"></i></a>

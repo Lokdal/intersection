@@ -1,14 +1,12 @@
- 
-game.actors.get("dF5hvYKo6WTerqs8").items.get("qHR9aY4JalDRQgVh").effects.get("qqpQpghoLoGo0oZS").data.changes
 
 
 Ikaguia: If I want to add items to a compendium for a system, and I have their data in a .json file, what would be the best way of doing it?
 Ethaks: Is their format already compatible with Foundry, so that you could throw it into Item.create(yourDataHere) and get a functioning item? If you have an array of such data in json, fetching that file and letting Foundry do the legwork can be relatively easy.
 Ikaguia: yeah, it's in a foundry compatible format, but where would be the proper place to do that Item.create? It would probably be best to not have it be called for everyone running the system, just the devs who would actually change the .json
-Ethaks: For a one time import, place a json containing an array of raw data objects somewhere fetch can reach, e.g. in the system's directory. Create a compendium in the world (the file can later be moved to the system's packs). Then, you can run a macro (or, and this is probably easier, use the console) and use something like this: 
-const file = await fetch(`/systems/my-system/my-skills.json`);
-const data = await file.json(); // This should be an array of raw data objects
-const items = await Item.createDocuments(data, { pack: "world.my-new-pack" });
+Ethaks: For a one time import, place a json containing an array of raw data objects somewhere fetch can reach, e.g. in the system's directory. Create a compendium in the world (the file can later be moved to the system's packs). 
+Then, you can run a macro (or, and this is probably easier, use the console) and use something like this: 
 
- And with that you should have one compendium full of newly created items, verified by Foundry
-Ikaguia: Thanks that is very helpfull
+
+const file = await fetch(`/systems/intersection/packs/Intersection_pack.json`);
+const data = await file.json();
+const items = await Item.createDocuments(data, { pack: "intersection.items" });
