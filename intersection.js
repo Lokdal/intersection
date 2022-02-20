@@ -1,6 +1,7 @@
 import {intersection} from "./module/config.js";
 import item_sheet from "./module/sheets/item_sheet.js";
 import actor_sheet from "./module/sheets/actor_sheet.js";
+import actor_class from "./module/actor_class.js";
 
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
@@ -22,6 +23,7 @@ Hooks.once("init", function() {
     console.log("Intersection | Initializing system");
     
     CONFIG.intersection = intersection;
+    CONFIG.Actor.entityClass = actor_class;
 
     console.log("Intersection | Unregister Foundry sheets");
     Items.unregisterSheet("core", ItemSheet);
@@ -30,6 +32,7 @@ Hooks.once("init", function() {
     console.log("Intersection | Register Intersection sheets");
     Items.registerSheet("intersection", item_sheet, {makeDefault: true});
     Actors.registerSheet("intersection", actor_sheet, {makeDefault: true});
+
 
     console.log("Intersection | Load Handlebars Templates");
     preloadHandlebarsTemplates();

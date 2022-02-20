@@ -9,4 +9,4 @@ Then, you can run a macro (or, and this is probably easier, use the console) and
 
 const file = await fetch(`/systems/intersection/packs/Intersection_pack.json`);
 const data = await file.json();
-const items = await Item.createDocuments(data, { pack: "intersection.items" });
+const items = await Item.createDocuments(data, { pack: "world.items" });
