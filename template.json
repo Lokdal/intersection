@@ -8,7 +8,8 @@
         "templates": {
 
             "common": {
-                "description": ""
+                "class": "Adventurer",
+                "title": "n00b"
             },
 
             "experience": {
@@ -271,7 +272,7 @@
                 "ranged_skill_throwingWeapons": 0,
                 "ranged_skill_thrown_precise": 0,
                 "ranged_skill_thrown_flurry": 0,
-                "ranged_skill_thrown_aimEyes": 0,
+                "ranged_skill_thrown_deadlyThrow": 0,
                 "ranged_skill_shootingWeapons": 0,
                 "ranged_skill_shoot_takeAim": 0,
                 "ranged_skill_shoot_longRange": 0,
