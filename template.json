@@ -61,175 +61,121 @@
                     "label": "Melee Offense",
                     "base": 1,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "melee_def": {
                     "label": "Melee Defense",
                     "base": 1,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "melee_crit": {
                     "label": "Melee Critical Hit %",
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "melee_extraAtt": {
                     "label": "Melee Extra Attack %",
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "melee_cripple": {
                     "label": "Melee Cripple %",
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "melee_stun": {
                     "label": "Melee Stun %",
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "melee_pierce": {
                     "label": "Melee Pierce %",
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "melee_dodge": {
                     "label": "Melee Dodge %",
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "melee_soak": {
                     "label": "Melee Soak Damage",
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
 
                 "ranged_off": {
                     "base": 1,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "ranged_def": {
                     "base": 1,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "ranged_crit": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "ranged_extraAtt": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "ranged_cripple": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "ranged_stun": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "ranged_pierce": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "ranged_dodge": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "ranged_soak": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
 
                 "magic_off": {
                     "base": 1,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "magic_def": {
                     "base": 1,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "magic_crit": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "magic_extraAtt": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "magic_cripple": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "magic_stun": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "magic_pierce": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "magic_dodge": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
                 "magic_soak": {
                     "base": 0,
                     "equip": 0,
-                    "temp": 0,
-                    "total": 0
-                },
+                    "temp": 0},
 
                 "movement_speed": 1,
                 "perception": 20,

@@ -2,6 +2,7 @@ import {intersection} from "./module/config.js";
 import item_sheet from "./module/sheets/item_sheet.js";
 import actor_sheet from "./module/sheets/actor_sheet.js";
 import actor_class from "./module/actor_class.js";
+// import form_application from "./module/form_application.js";
 
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
@@ -14,7 +15,8 @@ async function preloadHandlebarsTemplates() {
         "systems/intersection/templates/partials/accessory_card.hbs",
         "systems/intersection/templates/partials/jewelry_card.hbs",
         "systems/intersection/templates/partials/skill_card.hbs",
-        "systems/intersection/templates/partials/spell_card.hbs"
+        "systems/intersection/templates/partials/spell_card.hbs",
+        "systems/intersection/templates/partials/actor_sheet_tabs/actor_sheet_tab_main.hbs"
     ];
     return loadTemplates(templatePaths);
 };
