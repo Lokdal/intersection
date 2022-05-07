@@ -1,0 +1,161 @@
+<div class="tab actor_sheet_tab actor_sheet_tab_magic" data-group="primary" data-tab="actor_sheet_tab_magic" > 
+    <div class="tab_grid">
+        <div class="stats_table">
+            <div class="cell_header">Critical Hit %</div>
+            <div class="cell_header">Extra Attack %</div>
+            <div class="cell_header">Cripple %</div>
+            <div class="cell_header">Stun %</div>
+            <div class="cell_header">Pierce %</div>
+            <div class="cell_header">Dodge %</div>
+            <div class="cell_header">Soak %</div>
+            
+
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.magic_crit.total}}"
+                title="Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.magic_extraAtt.total}}"
+                title="Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.magic_cripple.total}}"
+                title="Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.magic_stun.total}}"
+                title="Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.magic_pierce.total}}"
+                title="Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.magic_dodge.total}}"
+                title="Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.magic_soak.total}}"
+                title="Soak Damage Skill Level * 3% + Equipment + Skill/Spells/Potions"/>
+
+        </div>
+
+        <div> </div>
+
+        <div class="skills_table">
+            <div class="cell_header">Skill</div>
+            <div class="cell_header">Cost</div>
+            <div class="cell_header">Level</div>
+            <div class="cell_header">Description</div>
+
+
+            <div class="skill_h1">Magic Armor Mastery</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.magic_skill_armor}}"/>
+            <div class="skill_description">
+                Use and craft Magic Body Armors and Shields of up to 
+                <span class="skill_value" title="[10 per S.L.]">level {{data.data.magic_skill_armor.value}}</span>.
+            </div>
+            
+            <div class="skill_h2 alternate_row">Magic Adept</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.magic_skill_adept}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[2 per S.L.]">+ {{data.data.magic_skill_adept.value}} Concentration</span>
+                 on all Concentration rolls.
+            </div>
+            
+            <div class="skill_h2">Magic Weapons Mastery</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.magic_skill_magicWeapons}}"/>
+            <div class="skill_description">
+                Use and craft Magic weapons of up to 
+                <span class="skill_value" title="[10 per S.L.]">level {{data.data.magic_skill_magicWeapons.value}}</span>.
+            </div>
+
+            <div class="skill_h2 alternate_row">Black Magic Mastery</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.magic_skill_black}}"/>
+            <div class="skill_description alternate_row">
+                Use and craft Black Magic spells of up to 
+                <span class="skill_value" title="[1 per S.L.]">Tier {{data.data.magic_skill_black.value}}</span>.
+            </div>
+
+            <div class="skill_h3">Demonic Expert</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.magic_skill_black_demonic}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[1 per S.L.]">+ {{data.data.magic_skill_black_demonic.value}} Spell Force</span>
+                when casting Demonic Spells.
+            </div>
+
+            <div class="skill_h3 alternate_row">Forces Expert</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.magic_skill_black_forces}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[1 per S.L.]">+ {{data.data.magic_skill_black_forces.value}} Spell Force</span>
+                when casting Forces Spells.
+            </div>
+
+            <div class="skill_h3">Necromancy Expert</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.magic_skill_black_necromancy}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[1 per S.L.]">+ {{data.data.magic_skill_black_necromancy.value}} Spell Force</span>
+                when casting Necromancy Spells.
+            </div>
+
+            <div class="skill_h2 alternate_row">Grey Magic Mastery</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.magic_skill_grey}}"/>
+            <div class="skill_description alternate_row">
+                Use and craft Grey Magic spells of up to 
+                <span class="skill_value" title="[1 per S.L.]">Tier {{data.data.magic_skill_grey.value}}</span>.
+            </div>
+
+            <div class="skill_h3">Nature Expert</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.magic_skill_grey_nature}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[1 per S.L.]">+ {{data.data.magic_skill_grey_nature.value}} Spell Force</span>
+                when casting Nature Spells.
+            </div>
+
+            <div class="skill_h3 alternate_row">Dimensions Expert</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.magic_skill_grey_dimensions}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[1 per S.L.]">+ {{data.data.magic_skill_grey_dimensions.value}} Spell Force</span>
+                when casting Dimensions Spells.
+            </div>
+
+            <div class="skill_h3">Mind Expert</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.magic_skill_grey_mind}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[1 per S.L.]">+ {{data.data.magic_skill_grey_mind.value}} Spell Force</span>
+                when casting Mind Spells.
+            </div>
+
+            <div class="skill_h2 alternate_row">White Magic Mastery</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.magic_skill_white}}"/>
+            <div class="skill_description alternate_row">
+                Use and craft White Magic spells of up to 
+                <span class="skill_value" title="[1 per S.L.]">Tier {{data.data.magic_skill_white.value}}</span>.
+            </div>
+
+            <div class="skill_h3">Divine Expert</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.magic_skill_white_divine}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[1 per S.L.]">+ {{data.data.magic_skill_white_divine.value}} Spell Force</span>
+                when casting Divine Spells.
+            </div>
+
+            <div class="skill_h3 alternate_row">Life Expert</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.magic_skill_white_life}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[1 per S.L.]">+ {{data.data.magic_skill_white_life.value}} Spell Force</span>
+                when casting Life Spells.
+            </div>
+
+            <div class="skill_h3">Creation Expert</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.magic_skill_white_creation}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[1 per S.L.]">+ {{data.data.magic_skill_white_creation.value}} Spell Force</span>
+                when casting Creation Spells.
+            </div>
+
+
+
+    </div>

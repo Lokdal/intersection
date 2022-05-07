@@ -1,0 +1,274 @@
+<div class="tab actor_sheet_tab actor_sheet_tab_combat" data-group="primary" data-tab="actor_sheet_tab_combat" > 
+    <div class="sheet-combat">    
+        <h1>Combat Type</h1>
+        <table>
+            <tr>
+                <th style="text-align: center;"></th>
+                <th style="text-align: center;">Cost</th>
+                <th style="width: 60px; text-align: center;">Current<br>Level</th>
+                <th style="width: 60px; text-align: center;">Max<br>Level</th>
+                <th style="text-align: center;">Effect</th>
+            </tr>
+
+            <tr>
+                <td><b><span style="white-space: nowrap;">Control</span></b></td>
+                <td>(Passive)</td>
+                <td style="text-align: center;"><input type="number" name="attr_Control" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_Control_max" value="10" readonly="true" /></td>
+                <td>
+                    <p><br>Once per game, 50% to cancel an attack or spell from an enemy of up to
+                        <b><span style="color: #5e9ca0;">tier </span>
+                            <span style="color: #5e9ca0;" type="number" name="attr_ControlValue1" value="Error" /></b> within 3 hexes [1 per S.L.]
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="white-space: nowrap;"> Counterspell</span></td>
+                <td>(2 MP, when a spell is cast)</td>
+                <td style="text-align: center;"><input type="number" name="attr_Counterspell" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_Counterspell_max" value="10" readonly="true" /></td>
+                <td>
+                    <p><br>Forces a target of up to <b><span style="color: #5e9ca0;">tier </span><span
+                                style="color: #5e9ca0;" type="number" name="attr_CounterspellValue1"
+                                value="Error" /></b> within 2 hexes to make a Concentration Roll upon casting [1 per S.L.]
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="white-space: nowrap;"> Dash</span></td>
+                <td>(Passive)</td>
+                <td style="text-align: center;"><input type="number" name="attr_Dash" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_Dash_max" value="10" readonly="true" />
+                </td>
+                <td>
+                    <p><br>The player has <b><span style="color: #5e9ca0;" type="number" name="attr_DashValue1"
+                                value="Error"></span><span style="color: #5e9ca0;">% chance</span></b> to move 2 hexes [15% per S.L.] and <b><span style="color: #5e9ca0;" type="number" name="attr_DashValue2"
+                                value="Error"></span><span style="color: #5e9ca0;">% chance</span></b> to move 3 hexes anytime he moves [15% per S.L. -100%]</p>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="white-space: nowrap;"> Distract</span></td>
+                <td>(2 SP, when an action is declared)</td>
+                <td style="text-align: center;"><input type="number" name="attr_Distract" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_Distract_max" value="10" readonly="true" /></td>
+                <td>
+                    <p><br>50% chance to cancel the current action (other than casting) of a target of up to
+                        <b><span style="color: #5e9ca0;">tier </span>
+                            <span style="color: #5e9ca0;" type="number" name="attr_DistractValue1" value="Error" /></b> [1 per S.L.]</p>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="white-space: nowrap;"> Taunt</span></td>
+                <td>(2 SP/MP, full action)</td>
+                <td style="text-align: center;"><input type="number" name="attr_Taunt" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_Taunt_max" value="10" readonly="true" />
+                </td>
+                <td>
+                    <p><br>Forces nearby creatures to attack the player for 2 rounds. Affects a total of up to <b><span
+                                style="color: #5e9ca0;" type="number" name="attr_TauntValue1" value="Error" /></b> creature levels [15 per S.L.]</p>
+                </td>
+            </tr>
+            <tr>
+                <td><b><span style="white-space: nowrap;"> Defense</span></b></td>
+                <td>(Passive)</td>
+                <td style="text-align: center;"><input type="number" name="attr_Defense" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_Defense_max" value="10" readonly="true" /></td>
+                <td>
+                    <p><br>Once per game, dodge an attack or spell of up to <b><span style="color: #5e9ca0;">tier
+                            </span><span style="color: #5e9ca0;" type="number" name="attr_DefenseValue1"
+                                value="Error" /></b>  [1 per S.L.]
+                </td>
+            </tr>
+            <tr>
+                <td><span style="white-space: nowrap;"> Excellent Reflexes</span></td>
+                <td>(Passive)</td>
+                <td style="text-align: center;"><input type="number" name="attr_ExcellentReflexes" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_ExcellentReflexes_max" value="10" readonly="true" /></td>
+                <td>
+                    <p><br>The player gets Defense Bonuses to his Body Armor.<br> Sronger Defense Level: <b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;"
+                                type="number" name="attr_ExcellentReflexesValue1" value="Error" /></b><br> Same Defense Level: <b><span style="color: #5e9ca0;">+</span><span
+                                style="color: #5e9ca0;" type="number" name="attr_ExcellentReflexesValue2"
+                                value="Error" /></b><br> Weaker Defense Level: <b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                                name="attr_ExcellentReflexesValue3" value="Error" /></b><br>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <p>
+                        <table width="400" border="1" style="text-align: center;margin-left:auto;margin-right:auto">
+                            <tbody>
+                                <tr>
+                                    <td width="35">Level</td>
+                                    <td width="35">Str. Def. Lvl.</td>
+                                    <td width="35">Same Def. Lvl.</td>
+                                    <td width="35">Weak. Def. Lvl.</td>
+                                    <td width="35">Level</td>
+                                    <td width="35">Str. Def. Lvl.</td>
+                                    <td width="35">Same Def. Lvl.</td>
+                                    <td width="35">Weak. Def. Lvl.</td>
+                                </tr>
+                                <tr>
+                                    <td width="35">1</td>
+                                    <td width="35">+1</td>
+                                    <td width="35">-</td>
+                                    <td width="35">-</td>
+                                    <td width="35">6</td>
+                                    <td width="35">+2</td>
+                                    <td width="35">+2</td>
+                                    <td width="35">+2</td>
+                                </tr>
+                                <tr>
+                                    <td width="35">2</td>
+                                    <td width="4">+1</td>
+                                    <td width="35">+1</td>
+                                    <td width="35">-</td>
+                                    <td width="35">7</td>
+                                    <td width="35">+3</td>
+                                    <td width="35">+2</td>
+                                    <td width="35">+2</td>
+                                </tr>
+                                <tr>
+                                    <td width="35">3</td>
+                                    <td width="35">+1</td>
+                                    <td width="35">+1</td>
+                                    <td width="35">+1</td>
+                                    <td width="35">8</td>
+                                    <td width="35">+3</td>
+                                    <td width="35">+3</td>
+                                    <td width="35">+2</td>
+                                </tr>
+                                <tr>
+                                    <td width="35">4</td>
+                                    <td width="35">+2</td>
+                                    <td width="35">+1</td>
+                                    <td width="35">+1</td>
+                                    <td width="35">9</td>
+                                    <td width="35">+3</td>
+                                    <td width="35">+3</td>
+                                    <td width="35">+3</td>
+                                </tr>
+                                <tr>
+                                    <td width="35">5</td>
+                                    <td width="35">+2</td>
+                                    <td width="35">+2</td>
+                                    <td width="35">+1</td>
+                                    <td width="35">10</td>
+                                    <td width="35">+4</td>
+                                    <td width="35">+4</td>
+                                    <td width="35">+4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="white-space: nowrap;"> Predict Action</span></b>
+                </td>
+                <td>(3 SP/MP, full action)</td>
+                <td style="text-align: center;"><input type="number" name="attr_PredictAction" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_PredictAction_max" value="10" readonly="true" /></td>
+                <td>
+                    <p><br>A target within 2 hexes loses <b><span style="color: #5e9ca0;" type="number"
+                                name="attr_PredictActionValue1" value="Error" /></b> Main Offense Level on the next round [1 per S.L.]</p>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="white-space: nowrap;"> Resist Attack</span></b>
+                </td>
+                <td>(2 SP/MP, when declared as a target)</td>
+                <td style="text-align: center;"><input type="number" name="attr_ResistAttack" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_ResistAttack_max" value="10" readonly="true" /></td>
+                <td>
+                    <p><br>50% chance to dodge a weapon or a spell of up to <b><span style="color: #5e9ca0;">tier
+                            </span><span style="color: #5e9ca0;" type="number" name="attr_ResistAttackValue1"
+                                value="Error" /></b> before the player's defense roll [1 per S.L.]
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="white-space: nowrap;"> Soak Damage</span></b>
+                </td>
+                <td>(Passive)</td>
+                <td style="text-align: center;"><input type="number" name="attr_SoakDamage" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_SoakDamage_max" value="10" readonly="true" /></td>
+                <td>
+                    <p><br><b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                                name="attr_SoakDamageValue1" value="Error"></span><span style="color: #5e9ca0;">%
+                                chance</span></b> [3% per S.L.] to negate up to <b><span style="color: #5e9ca0;"
+                                type="number" name="attr_SoakDamageValue2" value="Error"></span><span
+                                style="color: #5e9ca0;"> damage</span></b> on each attack or spell [3 per S.L.]</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><b><span style="white-space: nowrap;"> Offense</span></b></td>
+                <td>(Passive)</td>
+                <td style="text-align: center;"><input type="number" name="attr_Offense" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_Offense_max" value="10" readonly="true" /></td>
+                <td>
+                    <p><br>Once per game, a failed attack against an enemy of up to <b><span
+                                style="color: #5e9ca0;">tier </span><span style="color: #5e9ca0;" type="number"
+                                name="attr_OffenseValue1" value="Error" /></b> hits and deals <b><span style="color: #5e9ca0;"
+                                type="number" name="attr_OffenseValue2" value="Error"></span><span
+                                style="color: #5e9ca0;"> damage</span></b> [1 per S.L.]</p>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="white-space: nowrap;"> Counterattack</span></td>
+                <td>(Passive)</td>
+                <td style="text-align: center;"><input type="number" name="attr_Counterattack" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_Counterattack_max" value="10" readonly="true" /></td>
+                <td>
+                    <p><br>When hit, the player has 50% chance to deal <b><span style="color: #5e9ca0;" type="number"
+                                name="attr_CounterattackValue1" value="Error"></span><span style="color: #5e9ca0;">
+                                damage</span></b> to the attacker if they are within the player's current attack range [1 per S.L.]</p>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="white-space: nowrap;"> Coup de grâce</span></td>
+                <td>(Passive)</td>
+                <td style="text-align: center;"><input type="number" name="attr_CoupDeGrace" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_CoupDeGrace_max" value="10" readonly="true" /></td>
+                <td>
+                    <p><br>If a player’s action brings a creature to <b><span style="color: #5e9ca0;" type="number"
+                                name="attr_CoupDeGraceValue1" value="Error"></span><span style="color: #5e9ca0;">
+                                LP</span></b> or less, they have 50% chance to bring it down to 0 LP [2 per S.P.]
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="white-space: nowrap;"> Dual Wielding Mastery</span></td>
+                <td>(Passive, on hit)</td>
+                <td style="text-align: center;"><input type="number" name="attr_DualWieldingMastery" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_DualWieldingMastery_max" value="10" readonly="true" /></td>
+                <td>
+                    <p><br>Allows the player to attack simultaneously with a one-handed weapon of up to <b><span
+                                style="color: #5e9ca0;">tier </span><span style="color: #5e9ca0;" type="number"
+                                name="attr_DualWieldingMasteryValue1" value="Error" /></b> in each hand [1 per S.L.]<br>
+                        <b><span style="color: #5e9ca0;">+</span><span style="color: #5e9ca0;" type="number"
+                                name="attr_DualWieldingMasteryValue2" value="Error"></span><span
+                                style="color: #5e9ca0;">% chance</span></b> to attack with the second weapon on every attack with the first weapon [9% per S.L.]
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><span style="white-space: nowrap;"> Energy Drain</span></td>
+                <td>(1 SP/MP, on attack, needs to hit)</td>
+                <td style="text-align: center;"><input type="number" name="attr_EnergyDrain" value="0" /></td>
+                <td style="text-align: center;"><input type="number" name="attr_EnergyDrain_max" value="10" readonly="true" /></td>
+                <td>
+                    <p><br>The target loses <b><span style="color: #5e9ca0;" type="number" name="attr_EnergyDrainValue1"
+                                value="Error" /></b> Mana or Stamina (whichever is higher) [3 per S.L.]</p>
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+</div>

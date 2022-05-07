@@ -18,8 +18,8 @@
 }
 .intersection.sheet.actor .sheet-content {
   display: grid;
-  grid-template-columns: repeat(22, 40px);
-  grid-template-rows: 40px 100px 10px 40px 20px 500px 40px;
+  grid-template-columns: 40px repeat(20, 40px) 20px;
+  grid-template-rows: 20px 100px 10px 40px 10px 500px 20px;
 }
 .intersection.sheet.actor .sheet-content .name_table {
   grid-column-start: 2;
@@ -45,16 +45,72 @@
   grid-template-columns: repeat(8, 100px);
   grid-template-rows: auto;
 }
-.intersection.sheet.actor .sheet-content .tab_main {
+.intersection.sheet.actor .sheet-content .actor_sheet_tab {
   grid-column-start: 2;
   grid-column-end: 21;
   grid-row-start: 6;
   grid-row-end: 7;
+}
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .stats_table {
+  grid-row-start: 1;
+  grid-row-end: 2;
   display: grid;
-  grid-template-columns: 160px 40px 560px;
+  grid-template-columns: repeat(2, 140px) repeat(5, 80px);
+  grid-template-rows: 1.2em 1.1em;
+}
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .skills_table {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: grid;
+  gap: 0px;
+  align-items: center;
+  grid-template-columns: 200px 60px 40px auto ;
+  grid-template-rows: repeat(16, 2.1em);
+}
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .skills_table .alternate_row {
+  background-color: beige;
+}
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .skills_table .skill_h1 {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .skills_table .skill_h2 {
+  font-size: 1.1em;
+  text-decoration: underline;
+}
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .skills_table .skill_h3 {
+  font-size: 1em;
+}
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .skills_table .skill_cost {
+  text-align: center;
+  font-size: 1em;
+}
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .skills_table .skill_level {
+  text-align: center;
+  font-size: 1em;
+  height: auto;
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .skills_table .skill_description {
+  font-size: 1em;
+}
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .skills_table .skill_value {
+  font-size: 1em;
+  color: #5e9ca0;
+  font-weight: bold;
+}
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .skills_table .skill_used {
+  text-align: center;
+  font-size: 1em;
+}
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .actor_sheet_tab_main .tab_grid {
+  display: grid;
+  grid-template-columns: 160px 40px 600px;
   grid-template-rows: 500px;
 }
-.intersection.sheet.actor .sheet-content .tab_main .equipment_table {
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .actor_sheet_tab_main .tab_grid .equipment_table {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -63,7 +119,7 @@
   grid-template-columns: repeat(3, 64px);
   grid-template-rows: repeat(3, 64px) 16px repeat(3, 64px);
 }
-.intersection.sheet.actor .sheet-content .tab_main .skills_table {
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .actor_sheet_tab_main .tab_grid .skills_table {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -72,43 +128,34 @@
   grid-template-columns: 120px 40px 60px auto 40px ;
   grid-template-rows: repeat(21, auto);
 }
-.intersection.sheet.actor .sheet-content .tab_melee {
-  grid-column-start: 2;
-  grid-column-end: 21;
-  grid-row-start: 6;
-  grid-row-end: 7;
-  display: none;
-  grid-template-columns: 100px 100px 500px;
-  grid-template-rows: 500px;
-}
-.intersection.sheet.actor .sheet-content .tab_melee .stats_table {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .actor_sheet_tab_melee .tab_grid {
   display: grid;
-  grid-template-columns: 100px 100px;
-  grid-template-rows: repeat(14, auto);
+  justify-content: center;
+  grid-template-columns: 800px;
+  grid-template-rows: 80px auto auto;
 }
-.intersection.sheet.actor .sheet-content .button {
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  padding: 2px;
-  margin: 5px;
-  cursor: pointer;
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .actor_sheet_tab_ranged .tab_grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 800px;
+  grid-template-rows: 80px auto auto;
+}
+.intersection.sheet.actor .sheet-content .actor_sheet_tab .actor_sheet_tab_magic .tab_grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 800px;
+  grid-template-rows: 80px auto auto;
 }
 .intersection.sheet.actor .sheet-content .cell_header {
   text-align: center;
-  font-size: 12pt;
+  font-size: 1.2em;
   font-weight: bold;
-  height: 2em;
   word-wrap: normal;
+  background-color: azure;
 }
 .intersection.sheet.actor .sheet-content .cell_data {
   text-align: center;
-  font-size: 12pt;
+  font-size: 1em;
   height: 1.3em;
   margin-top: 0px;
   margin-right: 0px;

@@ -2,7 +2,9 @@ export default class actor_sheet extends ActorSheet {
 
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            template: `systems/intersection/templates/sheets/actor_sheet.hbs`,
+            template: "systems/intersection/templates/sheets/actor_sheet.hbs",
+            // Continue here, check the tabs argument
+            tabs: [{navSelector: ".tab_switcher", contentSelector: ".actor_sheet_tab", initial: "actor_sheet_tab_melee"}], //!!! I don't understand effall. I guess the selectors are classes?
             width: 880,
             height: 800,
             classes: ["intersection", "sheet", "actor"]

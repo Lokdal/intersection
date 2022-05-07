@@ -6,17 +6,24 @@ import actor_class from "./module/actor_class.js";
 
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
-        "systems/intersection/templates/partials/actor_points_table.hbs",
-        "systems/intersection/templates/partials/actor_stats_table.hbs",
-        "systems/intersection/templates/partials/actor_equip_table.hbs",
-        "systems/intersection/templates/partials/actor_skills_table.hbs",
-        "systems/intersection/templates/partials/weapon_card.hbs",
-        "systems/intersection/templates/partials/armor_card.hbs",
-        "systems/intersection/templates/partials/accessory_card.hbs",
-        "systems/intersection/templates/partials/jewelry_card.hbs",
-        "systems/intersection/templates/partials/skill_card.hbs",
-        "systems/intersection/templates/partials/spell_card.hbs",
-        "systems/intersection/templates/partials/actor_sheet_tabs/actor_sheet_tab_main.hbs"
+        "systems/intersection/templates/table_actor_points.hbs",
+        "systems/intersection/templates/table_actor_stats.hbs",
+        "systems/intersection/templates/table_actor_equip.hbs",
+        "systems/intersection/templates/table_actor_skills.hbs",
+        "systems/intersection/templates/card_weapon.hbs",
+        "systems/intersection/templates/card_armor.hbs",
+        "systems/intersection/templates/card_accessory.hbs",
+        "systems/intersection/templates/card_jewelry.hbs",
+        "systems/intersection/templates/card_skill.hbs",
+        "systems/intersection/templates/card_spell.hbs",
+        "systems/intersection/templates/tabs/actor_sheet_tab_main.hbs",
+        "systems/intersection/templates/tabs/actor_sheet_tab_combat.hbs",
+        "systems/intersection/templates/tabs/actor_sheet_tab_melee.hbs",
+        "systems/intersection/templates/tabs/actor_sheet_tab_ranged.hbs",
+        "systems/intersection/templates/tabs/actor_sheet_tab_magic.hbs",
+        "systems/intersection/templates/tabs/actor_sheet_tab_inventory.hbs",
+        "systems/intersection/templates/tabs/actor_sheet_tab_spells.hbs",
+        "systems/intersection/templates/tabs/actor_sheet_tab_notes.hbs"
     ];
     return loadTemplates(templatePaths);
 };

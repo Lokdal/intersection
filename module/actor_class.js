@@ -58,6 +58,12 @@ export default class actor_class extends Actor {
         data.magic_pierce.total = Number(data.magic_pierce.base) + Number(data.magic_pierce.equip) + Number(data.magic_pierce.temp);
         data.magic_dodge.total = Number(data.magic_dodge.base) + Number(data.magic_dodge.equip) + Number(data.magic_dodge.temp);
         data.magic_soak.total = Number(data.magic_soak.base) + Number(data.magic_soak.equip) + Number(data.magic_soak.temp);
+
+        /*
+        Create all the calculated values from the skills both for descriptions and effects.
+        data.melee_skill_armor.value = 
+        */
+        
     };
 
 

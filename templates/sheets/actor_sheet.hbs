@@ -9,115 +9,26 @@
             </div>
         </div>
 
-        <div class="points_table">
-            {{> "systems/intersection/templates/partials/actor_points_table.hbs"}}
-        </div>
-
-        <div class="tab_switcher">
-            <button class="button" onclick="openTab('actor_sheet_tab_main')">Main</button>
-            <button class="button" onclick="openTab('actor_sheet_tab_inventory')">Inventory</button>
-            <button class="button" onclick="openTab('actor_sheet_tab_spells')">Spells</button>
-            <button class="button" onclick="openTab('actor_sheet_tab_notes')">Notes and Bio</button>
-            <button class="button" onclick="openTab('actor_sheet_tab_combat')">Combat</button>
-            <button class="button" onclick="openTab('actor_sheet_tab_melee')">Melee</button>
-            <button class="button" onclick="openTab('actor_sheet_tab_ranged')">Ranged</button>
-            <button class="button" onclick="openTab('actor_sheet_tab_magic')">Magic</button>
-        </div>
-
-        <div id="actor_sheet_tab_main" class="tab_main actor_sheet_tab"> 
-
-            <div class="equipment_table">
-                {{> "systems/intersection/templates/partials/actor_equip_table.hbs"}}
-            </div>
-            
-            <div class="skills_table">
-                <div class="cell_header">Skill</div>
-                <div class="cell_header">Tier</div>
-                <div class="cell_header">Cost</div>
-                <div class="cell_header">Description</div>
-                <div class="cell_header">Used?</div>
-                
-                {{#each skills as |skill id|}}
-                <div class="cell_data item skill" data-itemID="{{skill.id}}" data-field="name">{{skill.name}}</div>
-                <div class="cell_data item skill" data-itemID="{{skill.id}}" data-field="data.tier">{{skill.data.tier}}</div>
-                <div class="cell_data item skill" data-itemID="{{skill.id}}" data-field="data.cost_SP">{{skill.data.cost_SP}}</div>
-                <div class="cell_data item skill" data-itemID="{{skill.id}}" data-field="data.description">{{skill.data.cost_SP}}</div>
-                <div class="cell_data item skill" data-itemID="{{skill.id}}" data-field="data.used">lol</div>
-                {{/each}}
-            </div>
-        </div>
-
-        <div id="actor_sheet_tab_inventory" class="tab_inventory actor_sheet_tab">
-            
-        </div>
-        <div id="actor_sheet_tab_spells" class="tab_spells actor_sheet_tab">
-            
-        </div>
-        <div id="actor_sheet_tab_melee" class="tab_melee actor_sheet_tab">
-            <div class="stats_table">
-                
-                <div class="col_table">
-                    <div class="cell_header">Level</div>
-                    <input class="cell_data" type="text" data-dtype="Number" name="data.melee_level" value="{{data.data.melee_level}}"/>
-                    
-                    <div class="cell_header">Exp</div>
-                    <input class="cell_data" type="text" data-dtype="Number" name="data.melee_exp"  value="{{data.data.melee_exp}}"/>
-
-                    <div class="cell_header">Offense</div>
-                    <input class="cell_data" type="text" data-dtype="Number" name="data.melee_off.total"  value="{{data.data.melee_off.total}}"/>
-
-                    <div class="cell_header">Crit. Hit</div>
-                    <input class="cell_data" type="text" data-dtype="Number" name="data.melee_crit.total" value="{{data.data.melee_crit.total}}"/>
-                    
-                    <div class="cell_header">Extra Att.</div>
-                    <input class="cell_data" type="text" data-dtype="Number" name="data.melee_extraAtt.total" value="{{data.data.melee_extraAtt.total}}"/>
-                    
-                    <div class="cell_header">Cripple</div>
-                    <input class="cell_data" type="text" data-dtype="Number" name="data.melee_cripple.total" value="{{data.data.melee_cripple.total}}"/>
-                    
-                    <div class="cell_header">Stun</div>
-                    <input class="cell_data" type="text" data-dtype="Number" name="data.melee_stun.total" value="{{data.data.melee_stun.total}}"/>
-                </div>
-                
-                <div class="col_table">
-                    <div class="cell_header">Tier</div>
-                    <input class="cell_data" type="text" data-dtype="Number" name="data.melee_tier" value="{{data.data.melee_tier}}"/>
-
-                    <div class="cell_header">Next Level</div>
-                    <input class="cell_data" type="text" data-dtype="Number" name="!!! FIX ME"  value="!!! FIX ME"/>
-
-                    <div class="cell_header">Defense</div>
-                    <input class="cell_data" type="text" data-dtype="Number" name="data.melee_def.total" value="{{data.data.melee_def.total}}"/>
-                    
-                    <div class="cell_header">Pierce</div>
-                    <input class="cell_data" type="text" data-dtype="Number" name="data.melee_pierce.total" value="{{data.data.melee_pierce.total}}"/>
-                    
-                    <div class="cell_header">Dodge</div>
-                    <input class="cell_data" type="text" data-dtype="Number" name="data.melee_dodge.total" value="{{data.data.melee_dodge.total}}"/>
-                    
-                    <div class="cell_header">Soak</div>
-                    <input class="cell_data" type="text" data-dtype="Number" name="data.melee_soak.total" value="{{data.data.melee_soak.total}}"/>
-                </div>
-                
-            </div>
-        </div>
         
-        <div id="actor_sheet_tab_ranged" class="tab_ranged actor_sheet_tab">
+        {{> "systems/intersection/templates/table_actor_points.hbs"}}
 
+        <nav class="tab_switcher tabs" data-group="primary">
+            <a class="tab_switcher__item" data-tab="actor_sheet_tab_main">Main</a>
+            <a class="tab_switcher__item" data-tab="actor_sheet_tab_combat">Combat</a>
+            <a class="tab_switcher__item" data-tab="actor_sheet_tab_melee">Melee</a>
+            <a class="tab_switcher__item" data-tab="actor_sheet_tab_ranged">Ranged</a>
+            <a class="tab_switcher__item" data-tab="actor_sheet_tab_magic">Magic</a>
+            <a class="tab_switcher__item" data-tab="actor_sheet_tab_inventory">Inventory</a>
+            <a class="tab_switcher__item" data-tab="actor_sheet_tab_spells">Spells</a>
+            <a class="tab_switcher__item" data-tab="actor_sheet_tab_notes">Notes and Bio</a>
+
+        </nav>
+        <div class="actor_sheet_tab"> 
+            {{> "systems/intersection/templates/tabs/actor_sheet_tab_main.hbs"}}
+            {{> "systems/intersection/templates/tabs/actor_sheet_tab_combat.hbs"}}
+            {{> "systems/intersection/templates/tabs/actor_sheet_tab_melee.hbs"}}
+            {{> "systems/intersection/templates/tabs/actor_sheet_tab_ranged.hbs"}}
+            {{> "systems/intersection/templates/tabs/actor_sheet_tab_magic.hbs"}}
+            {{> "systems/intersection/templates/tabs/actor_sheet_tab_inventory.hbs"}}
         </div>
-    </div>
-
 </form>
-
-<script>
-    function openTab(tabName) {
-        var tabs = document.getElementsByClassName("actor_sheet_tab");
-        [...tabs].forEach(tab => {
-        if(tab.id != tabName) {
-            tab.style.display = "none";
-        } else {
-            tab.style.display = "grid";
-        }
-        });  
-    };
-</script>

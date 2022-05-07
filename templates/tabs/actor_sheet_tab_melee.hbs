@@ -1,0 +1,231 @@
+<div class="tab actor_sheet_tab_melee" data-group="primary" data-tab="actor_sheet_tab_melee" > 
+    <div class="tab_grid">
+
+        <div class="stats_table">
+            <div class="cell_header">Critical Hit %</div>
+            <div class="cell_header">Extra Attack %</div>
+            <div class="cell_header">Cripple %</div>
+            <div class="cell_header">Stun %</div>
+            <div class="cell_header">Pierce %</div>
+            <div class="cell_header">Dodge %</div>
+            <div class="cell_header">Soak %</div>
+            
+
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_crit.total}}"
+                title="Melee Critical Hit Skill Level * 3% + Melee Combat Mastery Skill Level * 1% + Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_extraAtt.total}}"
+                title="Melee Extra Attack Skill Level * 3% + Melee Combat Mastery * 2% + Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_cripple.total}}"
+                title="Melee Cripple Skill Level * 3% + Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_stun.total}}"
+                title="Melee Stun Skill Level * 3% + Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_pierce.total}}"
+                title="Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_dodge.total}}"
+                title="Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_soak.total}}"
+                title="Soak Damage Skill Level * 3% + Equipment + Skill/Spells/Potions"/>
+        </div>
+
+        <div> </div>
+
+        <div class="skills_table">
+            <div class="cell_header">Skill</div>
+            <div class="cell_header">Cost</div>
+            <div class="cell_header">Level</div>
+            <div class="cell_header">Description</div>
+
+
+            <div class="skill_h1">Melee Armor Mastery</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.melee_skill_armor}}"/>
+            <div class="skill_description">
+                Use and craft Melee Body Armors and Shields of up to 
+                <span class="skill_value" title="[10 per S.L.]">level {{data.data.melee_skill_armor.value}}</span>.
+            </div>
+            
+
+            <div class="skill_h2 alternate_row">Melee Combat Mastery</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.melee_skill_combat}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[1% per S.L.]">+ {{data.data.melee_skill_combat.value_crit}}% Critical Hit</span>
+                 and
+                <span class="skill_value" title="[1% per S.L.]">+ {{data.data.melee_skill_combat.value_ExtraAtt}}% Extra Attack</span>
+                 with melee weapons.
+            </div>
+            
+
+            <div class="skill_h3">Critical Hit</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.melee_skill_crit}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[3% per S.L.]">+ {{data.data.melee_skill_crit.value}}% Critical Hit</span>
+                 with melee weapons.
+            </div>
+            
+
+            <div class="skill_h3 alternate_row">Extra Attack</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.melee_skill_extraAtt}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[3% per S.L.]">+ {{data.data.melee_skill_extraAtt.value}}% Extra Attack</span>
+                 with melee weapons.
+            </div>
+            
+           
+            <div class="skill_h3">Cripple</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.melee_skill_cripple}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[3% per S.L.]">+ {{data.data.melee_skill_cripple.value}}% Cripple</span>
+                 with melee weapons.
+            </div>
+            
+
+            <div class="skill_h3 alternate_row">Stun</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.melee_skill_stun}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[3% per S.L.]">+ {{data.data.melee_skill_stun.value}}% Stun</span>
+                 with melee weapons.
+            </div>
+            
+
+            <div class="skill_h2">Stabbing Weapons Mastery</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.melee_skill_stabbingWeapons}}"/>
+            <div class="skill_description">
+                Use and craft Stabbing weapons of up to 
+                <span class="skill_value" title="[10 per S.L.]">level {{data.data.melee_skill_stabbingWeapons.value}}</span>.
+            </div>
+            
+
+            <div class="skill_h3 alternate_row">Perforate</div>
+            <div class="skill_cost alternate_row">2 SP </div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.melee_skill_stab_perforate}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[2 | 3 per S.L]">+ {{data.data.melee_skill_stab_perforate.value_1H}} | {{data.data.melee_skill_stab_perforate.value_2H}} Mel. Off.</span>
+                 if using a one-handed | two-handed Stabbing weapon.
+            </div>
+            
+
+            <div class="skill_h3">Injure</div>
+            <div class="skill_cost">1 SP </div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.melee_skill_stab_injure}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[6% per S.L]">+ {{data.data.melee_skill_stab_injure.value}}% Cripple</span>
+                 if using a Stabbing weapon.
+            </div>
+            
+
+            <div class="skill_h2 alternate_row">Slashing Weapons Mastery</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.melee_skill_slashingWeapons}}"/>
+            <div class="skill_description alternate_row">
+                Use and craft Slashing weapons of up to 
+                <span class="skill_value" title="[10 per S.L.]">level {{data.data.melee_skill_slashingWeapons.value}}</span>.
+            </div>
+            
+
+            <div class="skill_h3">Hack</div>
+            <div class="skill_cost">2 SP </div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.melee_skill_slash_hack}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[2 | 3 per S.L]">+ {{data.data.melee_skill_slash_hack.value_1H}} | {{data.data.melee_skill_slash_hack.value_2H}} Mel. Off.</span>
+                 if using a one-handed | two-handed Slashing weapon.
+            </div>
+            
+
+            <div class="skill_h3 alternate_row">Furious Swipes</div>
+            <div class="skill_cost alternate_row">1 SP </div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.melee_skill_slash_furious}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[6% per S.L]">+ {{data.data.melee_skill_slash_furious.value}}% Extra Attack</span>
+                 if using a Slashing weapon.
+            </div>
+            
+
+            <div class="skill_h2">Crushing Weapons Mastery</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.melee_skill_crushingWeapons}}"/>
+            <div class="skill_description">
+                Use and craft Crushing weapons of up to 
+                <span class="skill_value" title="[10 per S.L.]">level {{data.data.melee_skill_crushingWeapons.value}}</span>.
+            </div>
+            
+
+            <div class="skill_h3 alternate_row">Smash</div>
+            <div class="skill_cost alternate_row">2 SP </div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.melee_skill_crush_smash}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[2 | 3 per S.L]">+ {{data.data.melee_skill_crush_smash.value_1H}} | {{data.data.melee_skill_crush_smash.value_2H}} Mel. Off.</span>
+                 if using a one-handed | two-handed Crushing weapon.
+            </div>
+            
+
+            <div class="skill_h3">Concuss</div>
+            <div class="skill_cost">1 SP </div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.melee_skill_crush_concuss}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[6% per S.L]">+ {{data.data.melee_skill_crush_concuss.value}}% Stun</span>
+                 if using a Crushing weapon.
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+{{!-- 
+        <div class="stats_table">
+            <div class="cell_header"></div>
+            <div class="cell_header">Total</div>
+            <div class="cell_header">Base</div>
+            <div class="cell_header">Equip</div>
+            <div class="cell_header">Temp</div>
+            
+            <div class="cell_data">Critical Hit %</div>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_crit.total}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_crit.base}}" title="Melee Critical Hit Skill Level * 3% + Melee Combat Mastery Skill Level * 1%"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_crit.equip}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_crit.temp}}"/>
+
+            <div class="cell_data">Extra Attack %</div>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_extraAtt.total}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_extraAtt.base}}" title="Melee Extra Attack Skill Level * 3% + Melee Combat Mastery * 2%"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_extraAtt.equip}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_extraAtt.temp}}"/>
+
+            <div class="cell_data">Cripple %</div>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_cripple.total}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_cripple.base}}" title="Melee Cripple Skill Level * 2%"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_cripple.equip}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_cripple.temp}}"/>
+
+            <div class="cell_data">Stun %</div>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_stun.total}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_stun.base}}" title="Melee Stun Skill Level * 3%"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_stun.equip}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_stun.temp}}"/>
+
+            <div class="cell_data">Pierce %</div>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_pierce.total}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_pierce.base}}" title="Always 0%"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_pierce.equip}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_pierce.temp}}"/>
+
+            <div class="cell_data">Dodge %</div>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_dodge.total}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_dodge.base}}" title="Always 0%"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_dodge.equip}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_dodge.temp}}"/>
+
+            <div class="cell_data">Soak %</div>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_soak.total}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_soak.base}}" title="Soak Damage Skill Level * 3%"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_soak.equip}}"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.melee_soak.temp}}"/>
+        </div>
+
+ --}}

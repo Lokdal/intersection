@@ -1,0 +1,183 @@
+<div class="tab actor_sheet_tab actor_sheet_tab_ranged" data-group="primary" data-tab="actor_sheet_tab_ranged"> 
+
+    <div class="tab_grid">
+
+        <div class="stats_table">
+            <div class="cell_header">Critical Hit %</div>
+            <div class="cell_header">Extra Attack %</div>
+            <div class="cell_header">Cripple %</div>
+            <div class="cell_header">Stun %</div>
+            <div class="cell_header">Pierce %</div>
+            <div class="cell_header">Dodge %</div>
+            <div class="cell_header">Soak %</div>
+            
+
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.ranged_crit.total}}"
+                title="Ranged Critical Hit Skill Level * 3% + Ranged Combat Mastery Skill Level * 1% + Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.ranged_extraAtt.total}}"
+                title="Ranged Extra Attack Skill Level * 3% + Ranged Combat Mastery * 2% + Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.ranged_cripple.total}}"
+                title="Ranged Cripple Skill Level * 3% + Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.ranged_stun.total}}"
+                title="Ranged Stun Skill Level * 3% + Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.ranged_pierce.total}}"
+                title="Ranged Pierce Skill Level * 5% + Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.ranged_dodge.total}}"
+                title="Equipment + Skill/Spells/Potions"/>
+            <input class="cell_data" type="number" data-dtype="Number" value="{{data.data.ranged_soak.total}}"
+                title="Soak Damage Skill Level * 3% + Equipment + Skill/Spells/Potions"/>
+        </div>
+
+        <div> </div>
+
+        <div class="skills_table">
+            <div class="cell_header">Skill</div>
+            <div class="cell_header">Cost</div>
+            <div class="cell_header">Level</div>
+            <div class="cell_header">Description</div>
+
+
+            <div class="skill_h1">Ranged Armor Mastery</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.ranged_skill_armor}}"/>
+            <div class="skill_description">
+                Use and craft Ranged Body Armors and Shields of up to 
+                <span class="skill_value" title="[10 per S.L.]">level {{data.data.ranged_skill_armor.value}}</span>.
+            </div>
+            
+
+            <div class="skill_h2 alternate_row">Ranged Combat Mastery</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.ranged_skill_combat}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[1% per S.L.]">+ {{data.data.ranged_skill_combat.value_crit}}% Critical Hit</span>
+                 and
+                <span class="skill_value" title="[1% per S.L.]">+ {{data.data.ranged_skill_combat.value_ExtraAtt}}% Extra Attack</span>
+                 with Ranged weapons.
+            </div>
+            
+
+            <div class="skill_h3">Critical Hit</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.ranged_skill_crit}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[3% per S.L.]">+ {{data.data.ranged_skill_crit.value}}% Critical Hit</span>
+                 with Ranged weapons.
+            </div>
+            
+
+            <div class="skill_h3 alternate_row">Extra Attack</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.ranged_skill_extraAtt}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[3% per S.L.]">+ {{data.data.ranged_skill_extraAtt.value}}% Extra Attack</span>
+                 with Ranged weapons.
+            </div>
+            
+           
+            <div class="skill_h3">Cripple</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.ranged_skill_cripple}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[3% per S.L.]">+ {{data.data.ranged_skill_cripple.value}}% Cripple</span>
+                 with Ranged weapons.
+            </div>
+            
+
+            <div class="skill_h3 alternate_row">Stun</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.ranged_skill_stun}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[3% per S.L.]">+ {{data.data.ranged_skill_stun.value}}% Stun</span>
+                 with Ranged weapons.
+            </div>
+            
+
+            <div class="skill_h3">Pierce</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.ranged_skill_pierce}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[3% per S.L.]">+ {{data.data.ranged_skill_pierce.value}}% Pierce</span>
+                 with Ranged weapons.
+            </div>
+            
+
+            <div class="skill_h2 alternate_row">Shooting Weapons Mastery</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.ranged_skill_shootingWeapons}}"/>
+            <div class="skill_description alternate_row">
+                Use and craft Shooting weapons of up to 
+                <span class="skill_value" title="[10 per S.L.]">level {{data.data.ranged_skill_shootingWeapons.value}}</span>.
+            </div>
+            
+
+            <div class="skill_h3">Take Aim</div>
+            <div class="skill_cost">2 SP </div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.ranged_skill_shoot_takeAim}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[3 per S.L]">+ {{data.data.ranged_skill_shoot_takeAim.value}} Rng. Off.</span>
+                 if Shooting weapon.
+            </div>
+            
+
+            <div class="skill_h3 alternate_row">Pin Down</div>
+            <div class="skill_cost alternate_row">2 SP </div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.ranged_skill_shoot_pinDown}}"/>
+            <div class="skill_description alternate_row">
+                <span class="skill_value" title="[7% per S.L]">+ {{data.data.ranged_skill_shoot_pinDown.value}}% Cripple</span>
+                 if using a Shooting weapon.
+            </div>
+            
+
+            <div class="skill_h3">Long Range</div>
+            <div class="skill_cost">3 SP </div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.ranged_skill_shoot_longRange}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[1 + 0.3 per S.L]">+ {{data.data.ranged_skill_shoot_longRange.value}} Attack Range</span>
+                 if using a Shooting weapon.
+            </div>
+            
+
+            <div class="skill_h2 alternate_row">Throwing Weapons Mastery</div>
+            <div class="skill_cost alternate_row">-</div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.ranged_skill_throwingWeapons}}"/>
+            <div class="skill_description alternate_row">
+                Use and craft Throwning weapons of up to 
+                <span class="skill_value" title="[10 per S.L.]">level {{data.data.ranged_skill_throwingWeapons.value}}</span>.
+            </div>
+            
+
+            <div class="skill_h3">Precise Hit</div>
+            <div class="skill_cost">2 SP </div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.ranged_skill_thrown_precise}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[2 per S.L]">+ {{data.data.ranged_skill_thrown_precise.value}} Rng. Off.</span>
+                 if using a Throwing weapon.
+            </div>
+            
+
+            <div class="skill_h3 alternate_row">Flurry</div>
+            <div class="skill_cost alternate_row">3 SP </div>
+            <input class="skill_level alternate_row" type="number" data-dtype="Number" value="{{data.data.ranged_skill_thrown_flurry}}"/>
+            <div class="skill_description alternate_row">
+                Turns this attack into two attacks, the first with
+                <span class="skill_value" title="[0.5 per S.L. - 2]">{{data.data.ranged_skill_thrown_flurry.value_down}} Rng. Off.</span>
+                 and the second with 
+                <span class="skill_value" title="[0.5 per S.L. - 2]">{{data.data.ranged_skill_thrown_flurry.value_up}} Rng. Off.</span>
+                 if using a Slashing weapon.
+            </div>
+            
+
+            <div class="skill_h3">Deadly Throw</div>
+            <div class="skill_cost">-</div>
+            <input class="skill_level" type="number" data-dtype="Number" value="{{data.data.ranged_skill_thrown_deadlyThrow}}"/>
+            <div class="skill_description">
+                <span class="skill_value" title="[1 + 0.4 per S.L]">+ {{data.data.ranged_skill_thrown_deadlyThrow.value}} damage</span>
+                 if using a Throwing weapon.
+            </div>
+            
+        </div>
+
+    </div>
+
+</div>
